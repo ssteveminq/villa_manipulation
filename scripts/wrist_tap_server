@@ -1,0 +1,41 @@
+#!/usr/bin/python
+
+from hsrb_interface import Robot
+from std_srvs.srv import Trigger, TriggerResponse
+from std_msgs.msg import Int8
+import rospy
+
+class Wrist_Manager(object):
+    def __init__(self, wait=0.0):
+        self.int_pub = rospy.Publisher('/cmd_start',Int8, queue_size=10)
+        self.robot = Robot()
+
+    def wrist_trigger_callback(self,msg):
+        print("trigger callback") 
+    def listener(self):
+        rospy.spin()
+        
+    def wrist_trigger_server(self):
+        # rospy.init_node('wrist_trigger_node', anonymous=True)
+        rospy.Service('wrist_trigger', Trigger, self.trigger) 
+
+    def trigger(self,req):
+       fts = self.robot.get('wrist_wrench')
+       while not rospy.is_shutdown():
+           reading = fts.wrench
+           if reading[0][0] > 4.0:
+              print("wrist tapped! ")
+              trigger_msg=Int8()
+              trigger_msg.data=1
+              self.int_pub.publish(trigger_msg)
+              break
+       return TriggerResponse(success=True)
+
+if __name__ == '__main__':
+    # wrist_trigger_server()
+    wrist_manager=Wrist_Manager()
+    print("manager created")
+    wrist_manager.wrist_trigger_server()
+    wrist_manager.listener()
+
+

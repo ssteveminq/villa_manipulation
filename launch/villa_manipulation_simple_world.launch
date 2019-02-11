@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="namespace" default="/hsrb"/>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true" />
+  <arg name="rviz" default="true"/>
+  <arg name="gazebo_visualization" default="false" />
+  <arg name="use_manipulation" default="true" />
+  <arg name="use_navigation" default="true" />
+  <arg name="use_perception" default="false" />
+  <arg name="use_task" default="false" />
+  <arg name="use_teleop" default="true" />
+  <arg name="use_web" default="true" />
+  <arg name="use_laser_odom" default="false" />
+  <arg name="paused" default="true" />
+  <arg name="fast_physics" default="false" />
+
+  <arg unless="$(arg fast_physics)" name="world_suffix" value=""/>
+  <arg     if="$(arg fast_physics)" name="world_suffix" value="_fast"/>
+
+  <include file="$(find villa_launch)/launch/include/villa_simulation_common.xml" pass_all_args="true" >
+    <arg name="map" default="$(find tmc_potential_maps)/maps/apartment/map.yaml"/>
+    <arg name="world_name" value="$(find villa_manipulation)/worlds/empty_world_object_on_table.world" />
+    <arg name="robot_pos" value="-x 0 -y 0 -z 0 -Y 0" />
+  </include>
+
+</launch>

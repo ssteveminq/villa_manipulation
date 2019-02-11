@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+from std_srvs.srv import Empty, EmptyResponse, Trigger
+from std_msgs.msg import Int8
+from hsrb_interface import Robot
+import rospy
+
+def wrist_trigger():
+    rospy.wait_for_service('wrist_trigger')
+    print("waiting for wrist tap")
+    trigger = rospy.ServiceProxy('wrist_trigger', Trigger)
+    trigger()
+
+def inspect_cb(req):
+    rospy.loginfo("Waiting for inspection...")
+    wrist_trigger()
+    return EmptyResponse()
+
+def inspection_task_server(robot):
+    #rospy.init_node('wrist_tap_client')
+    whole_body = robot.try_get('whole_body')
+    for i in range(3):
+        whole_body.move_to_go()
+        wrist_trigger()
+        whole_body.move_to_neutral()
+
+if __name__ == '__main__':
+    robot = Robot()
+    inspection_task_server(robot)    

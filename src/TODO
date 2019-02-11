@@ -1,0 +1,8 @@
+Pipelining for grasping an object:
+	kr determines that an object needs to be picked up
+	Robot moves into the viewing position (neck fully extended, arm down, head looking at table)
+	perception detects the table and object
+	perception publishes some kind of filtered pointcloud, with only the object (and perhaps a bounding box as to where we need to go)
+	manipulation takes this pointcloud, and moves the arm up such that the wrist is parallel to the table
+	robot then moves sideways along the x(?)-axis such that the center of the gripper is aligned with the center of the pointcloud
+	robot then moves forward along the y(?)-axis until it has reached the object
