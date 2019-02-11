@@ -7,6 +7,11 @@ This package contains (or will contain) modular actionlib servers for common man
 * grasp\_server - simple implementation for picking up an object off of a table. (in progress)
 
 
+## Give pose & Receive pose
+```
+roslaunch villa_manipulation hri.launch
+```
+
 
 ## Demo for opening door
 
