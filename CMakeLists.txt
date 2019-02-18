@@ -4,6 +4,7 @@ project(villa_manipulation)
 set(CMAKE_CXX_STANDARD 11)
 
 find_package(catkin REQUIRED COMPONENTS
+  genmsg
   actionlib_msgs
   actionlib
   control_msgs
@@ -33,7 +34,6 @@ add_service_files(
    Opendoor.srv
    GetHandPositions.srv
    Grabbag.srv
-   
 )
 
 add_action_files(
@@ -41,7 +41,11 @@ add_action_files(
   FILES
    PerceptionPose.action
    PickUp.action
+   PickUpPlate.action
+   PickUpCutlery.action
    PutDown.action
+   ForcePutDown.action
+   PutDownDishwasher.action
    ScanShelf.action
    Handover.action
 )
@@ -76,9 +80,13 @@ catkin_package(
 add_library(libvilla_hsrb src/libvilla_hsrb/manipulator.cpp)
 target_link_libraries(libvilla_hsrb ${catkin_LIBRARIES})
 
-add_executable(grasp_server src/grasp_server.cpp src/libvilla_hsrb/manipulator.cpp src/transform_utils.cpp)
+add_executable(grasp_server src/grasp_server.cpp
+    src/manipulation_controller.cpp src/libvilla_hsrb/manipulator.cpp src/transform_utils.cpp)
 add_dependencies(grasp_server ${villa_manipulation_EXPORTED_TARGETS})
-target_link_libraries(grasp_server libvilla_hsrb ${catkin_LIBRARIES} )
+target_link_libraries(grasp_server ${catkin_LIBRARIES} )
+#add_executable(grasp_server src/grasp_server.cpp src/libvilla_hsrb/manipulator.cpp src/transform_utils.cpp)
+#add_dependencies(grasp_server ${villa_manipulation_EXPORTED_TARGETS})
+#target_link_libraries(grasp_server libvilla_hsrb ${catkin_LIBRARIES} )
 
 add_executable(force_sensor src/force_sensor_test.cpp)
 add_dependencies(force_sensor ${villa_manipulation_EXPORTED_TARGETS})

@@ -31,9 +31,15 @@ recog_pos = geometry_msgs.msg.PoseStamped()
 
 def mains():
     # Initialize
-    client = actionlib.SimpleActionClient('putdown_action',villa_manipulation.msg.HandoverAction)
+    client = actionlib.SimpleActionClient('putdown_action',villa_manipulation.msg.ForcePutDownAction)
     client.wait_for_server()
-    goal = villa_manipulation.msg.HandoverGoal()
+    goal = villa_manipulation.msg.ForcePutDownGoal()
+    goal.place_pose =PoseStamped()
+    goal.place_pose.pose.position.x=0.57
+    goal.place_pose.pose.position.y=-1.3
+    goal.place_pose.pose.position.z=0.70
+    goal.place_pose.header.frame_id='map'
+ 
     client.send_goal(goal)
     client.wait_for_result()
     rospy.loginfo("start action")

@@ -1,0 +1,5 @@
+geometry_msgs/Point object_location
+geometry_msgs/Vector3 orientation # biggest eigenvalue's eigenvector (say orientation of fork)
+float64 radius
+---
+---

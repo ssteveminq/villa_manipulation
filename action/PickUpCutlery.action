@@ -1,0 +1,4 @@
+geometry_msgs/Point object_location
+geometry_msgs/Vector3 orientation # smallest eigenvalue's eigenvector (say vector perpendicular to plate plane)
+---
+---

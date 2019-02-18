@@ -55,6 +55,8 @@
   <depend>tmc_planning_msgs</depend>
   <depend>tmc_utils</depend>
   <depend>trajectory_msgs</depend>
+  <!--<depend>plan_execution</depend>-->
+
 
 
   

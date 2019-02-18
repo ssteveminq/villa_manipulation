@@ -1,0 +1,744 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACTION_TIMEOUT	src/manipulation_controller.h	21;"	d
+ALIGN_ROBOT_TO_SURFACE_H	src/AlignRobotToSurface.h	2;"	d
+ARM_BASE_OFFSET	src/grasp_server.cpp	/^    double ARM_BASE_OFFSET = 0.30;$/;"	m	class:GraspAction	file:
+ARM_LENGTH	scripts/putdown_actionserver.py	/^ARM_LENGTH=0.3#$/;"	v
+ARM_LENGTH	src/grasp_server.cpp	/^    double ARM_LENGTH = 0.35; \/\/ distance from shoulder joint to wrist joints. measured on the robot$/;"	m	class:GraspAction	file:
+ARM_LINK_OFFSET_Z	scripts/putdown_actionserver.py	/^ARM_LINK_OFFSET_Z=0.3$/;"	v
+ARM_OFFSET_X	scripts/putdown_actionserver.py	/^ARM_OFFSET_X=0.05$/;"	v
+AlignRobotToSurface	src/AlignRobotToSurface.h	/^    AlignRobotToSurface(ros::NodeHandle& node_handle) :$/;"	f	class:AlignRobotToSurface
+AlignRobotToSurface	src/AlignRobotToSurface.h	/^class AlignRobotToSurface {$/;"	c
+BASE_APPROACH_OFFSET_X	scripts/putdown_actionserver.py	/^BASE_APPROACH_OFFSET_X=0.18$/;"	v
+Client	include/villa_manipulation/manipulator.h	/^typedef actionlib::SimpleActionClient<control_msgs::FollowJointTrajectoryAction> Client;$/;"	t
+Client	src/manipulation_controller.h	/^typedef actionlib::SimpleActionClient<control_msgs::FollowJointTrajectoryAction> Client;$/;"	t
+DEBUG	src/AlignRobotToSurface.h	/^const bool DEBUG = true;$/;"	v
+ForceSensorCapture	include/sensor_capture.h	/^    ForceSensorCapture() : force_data_() {$/;"	f	class:ForceSensorCapture
+ForceSensorCapture	include/sensor_capture.h	/^class ForceSensorCapture {$/;"	c
+ForceSensorCapture	include/villa_manipulation/sensor_capture.h	/^    ForceSensorCapture() : force_data_(), wrist_wrench_sub_(), nh_() {$/;"	f	class:ForceSensorCapture
+ForceSensorCapture	include/villa_manipulation/sensor_capture.h	/^class ForceSensorCapture {$/;"	c
+ForceSensorCapture	scripts/odh_l_pull.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/odh_l_push.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/odh_r_pull.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/odh_r_push.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/open_dishwasher.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/open_knobdoor_miguel.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/open_knobdoor_service.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	scripts/open_refdoor_service.py	/^class ForceSensorCapture(object):$/;"	c
+ForceSensorCapture	src/sensor_capture.h	/^    ForceSensorCapture() : force_data_() {$/;"	f	class:ForceSensorCapture
+ForceSensorCapture	src/sensor_capture.h	/^class ForceSensorCapture {$/;"	c
+GRAB_BAG_SRV_NAME	scripts/handover_actionserver.py	/^GRAB_BAG_SRV_NAME = 'openpose\/hand_positions'$/;"	v
+GivePoseAction	scripts/givepose_actionserver.py	/^class GivePoseAction(object):$/;"	c
+GraspAction	src/grasp_server.cpp	/^    GraspAction(void) :$/;"	f	class:GraspAction
+GraspAction	src/grasp_server.cpp	/^class GraspAction {$/;"	c	file:
+HANDLE_GOAL_OFFSET	scripts/odh_l_pull.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/odh_l_push.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/odh_r_pull.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/odh_r_push.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/open_dishwasher.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/open_door_service.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/open_gripper.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/open_knobdoor_miguel.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/open_knobdoor_service.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_GOAL_OFFSET	scripts/open_refdoor_service.py	/^HANDLE_GOAL_OFFSET = 0.5$/;"	v
+HANDLE_POS	scripts/odh_l_pull.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/odh_l_push.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/odh_r_pull.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/odh_r_push.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/open_dishwasher.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/open_door_service.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/open_gripper.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/open_knobdoor_miguel.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/open_knobdoor_service.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_POS	scripts/open_refdoor_service.py	/^HANDLE_POS = (5.1, 0.51, 0.947)$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/odh_l_pull.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/odh_l_push.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/odh_r_pull.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/odh_r_push.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/open_dishwasher.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/open_door_service.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/open_gripper.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/open_knobdoor_miguel.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/open_knobdoor_service.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_DOOR_HINGE_POS	scripts/open_refdoor_service.py	/^HANDLE_TO_DOOR_HINGE_POS = 0.61$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/odh_l_pull.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/odh_l_push.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/odh_r_pull.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/odh_r_push.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/open_dishwasher.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/open_door_service.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/open_gripper.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/open_knobdoor_miguel.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/open_knobdoor_service.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HANDLE_HINGE_POS	scripts/open_refdoor_service.py	/^HANDLE_TO_HANDLE_HINGE_POS = -0.06$/;"	v
+HANDLE_TO_HAND_POS	scripts/odh_l_pull.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/odh_l_push.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/odh_r_pull.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/odh_r_push.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/open_dishwasher.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/open_door_service.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/open_gripper.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/open_knobdoor_miguel.py	/^HANDLE_TO_HAND_POS = 0.095$/;"	v
+HANDLE_TO_HAND_POS	scripts/open_knobdoor_service.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS	scripts/open_refdoor_service.py	/^HANDLE_TO_HAND_POS = 0.067$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/handover_activity.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/odh_l_pull.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/odh_l_push.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/odh_r_pull.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/odh_r_push.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/open_dishwasher.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/open_door_service.py	/^HANDLE_TO_HAND_POS_X = 0.04$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/open_gripper.py	/^HANDLE_TO_HAND_POS_X = 0.04$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/open_knobdoor_miguel.py	/^HANDLE_TO_HAND_POS_X = 0.123$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/open_knobdoor_service.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_X	scripts/open_refdoor_service.py	/^HANDLE_TO_HAND_POS_X = 0.1$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/odh_l_pull.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/odh_l_push.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/odh_r_pull.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/odh_r_push.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/open_dishwasher.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/open_door_service.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/open_gripper.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/open_knobdoor_miguel.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/open_knobdoor_service.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HANDLE_TO_HAND_POS_Y	scripts/open_refdoor_service.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
+HEIGHT_OFFSET_Z	scripts/putdown_actionserver.py	/^HEIGHT_OFFSET_Z=0.25$/;"	v
+HandoverAction	scripts/handover_actionserver.py	/^class HandoverAction(object):$/;"	c
+JointStateMap	include/villa_manipulation/manipulator.h	/^typedef std::map<std::string, float> JointStateMap;$/;"	t
+MANIPUATION_CONTROLLER_H	src/manipulation_controller.h	2;"	d
+MAX_ARM_LIFT	scripts/putdown_actionserver.py	/^MAX_ARM_LIFT=0.67 #joint limit of arm lift joint $/;"	v
+MAX_ARM_LIFT_JOINT	src/grasp_server.cpp	/^    double MAX_ARM_LIFT_JOINT = 0.69; \/\/ from hsr.io documentation$/;"	m	class:GraspAction	file:
+MAX_HEIGHT_SHOULDER	scripts/putdown_actionserver.py	/^MAX_HEIGHT_SHOULDER=MAX_ARM_LIFT+ARM_LINK_OFFSET_Z #$/;"	v
+MAX_SHOULDER_HEIGHT	src/grasp_server.cpp	/^    double MAX_SHOULDER_HEIGHT = ARM_BASE_OFFSET + MAX_ARM_LIFT_JOINT;$/;"	m	class:GraspAction	file:
+Manipulator	include/villa_manipulation/manipulator.h	/^class Manipulator {$/;"	c	namespace:villa_manipulation
+Manipulator	src/libvilla_hsrb/manipulator.cpp	/^Manipulator::Manipulator(bool in_simulation) :$/;"	f	class:villa_manipulation::Manipulator
+Manipulator	src/manipulation_controller.h	/^	Manipulator(ros::NodeHandle& node_handle) :$/;"	f	class:Manipulator
+Manipulator	src/manipulation_controller.h	/^class Manipulator {$/;"	c
+OBJECT_LIFT_OFFSET	src/grasp_server.cpp	/^    double OBJECT_LIFT_OFFSET = 0.04;$/;"	m	class:GraspAction	file:
+ObJ_LIFT_OFFSET_Z	scripts/putdown_actionserver.py	/^ObJ_LIFT_OFFSET_Z=0.02$/;"	v
+OdometryCapture	include/sensor_capture.h	/^    OdometryCapture() : base_location_(), base_orientation_() {$/;"	f	class:OdometryCapture
+OdometryCapture	include/sensor_capture.h	/^class OdometryCapture {$/;"	c
+OdometryCapture	include/villa_manipulation/sensor_capture.h	/^    OdometryCapture() : base_location_(), base_orientation_(), odom_sub_(), nh_() {$/;"	f	class:OdometryCapture
+OdometryCapture	include/villa_manipulation/sensor_capture.h	/^class OdometryCapture {$/;"	c
+OdometryCapture	src/sensor_capture.h	/^    OdometryCapture() : base_location_(), base_orientation_() {$/;"	f	class:OdometryCapture
+OdometryCapture	src/sensor_capture.h	/^class OdometryCapture {$/;"	c
+PI	src/grasp_server.cpp	49;"	d	file:
+PI	src/manipulation_controller.h	20;"	d
+PutdownPoseAction	scripts/putdown_actionserver.py	/^class PutdownPoseAction(object):$/;"	c
+RECOG_HANDLE_POS	scripts/odh_l_pull.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/odh_l_push.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/odh_r_pull.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/odh_r_push.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/open_dishwasher.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/open_door_service.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/open_gripper.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/open_knobdoor_miguel.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/open_knobdoor_service.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+RECOG_HANDLE_POS	scripts/open_refdoor_service.py	/^RECOG_HANDLE_POS = (0.0, 0.0, 0.0)$/;"	v
+ReceivePoseAction	scripts/receivepose_actionserver.py	/^class ReceivePoseAction(object):$/;"	c
+SENSOR_CAPTURE	include/sensor_capture.h	2;"	d
+SENSOR_CAPTURE	include/villa_manipulation/sensor_capture.h	2;"	d
+SENSOR_CAPTURE	src/sensor_capture.h	2;"	d
+TRANSFORM_UTILS	include/villa_manipulation/transform_utils.h	2;"	d
+TaskManager	scripts/nav_open_door_client.py	/^class TaskManager(object):$/;"	c
+TrajectoryController	include/villa_manipulation/manipulator.h	/^  explicit TrajectoryController(const std::string &name): name(name), client(name + "\/follow_joint_trajectory", true) {$/;"	f	struct:TrajectoryController
+TrajectoryController	include/villa_manipulation/manipulator.h	/^struct TrajectoryController {$/;"	s
+Wrist_Manager	scripts/wrist_tap_server	/^class Wrist_Manager(object):$/;"	c
+_ARM_TF	scripts/putdown_actionserver.py	/^_ARM_TF = 'arm_lift_link'$/;"	v
+_BASE_TF	scripts/handover_activity.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/odh_l_pull.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/odh_l_push.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/odh_r_pull.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/odh_r_push.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/open_dishwasher.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/open_knobdoor_miguel.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/open_knobdoor_service.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/open_refdoor_service.py	/^_BASE_TF = 'base_link'$/;"	v
+_BASE_TF	scripts/putdown_actionserver.py	/^_BASE_TF = 'base_link'$/;"	v
+_CONNECTION_TIMEOUT	scripts/givepose_client.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/nav_open_door_client.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/odh_l_pull.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/odh_l_push.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/odh_r_pull.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/odh_r_push.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/open_dishwasher.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/open_door_client.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/open_knobdoor_miguel.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/open_knobdoor_service.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/open_refdoor_service.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/putdown_client.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_CONNECTION_TIMEOUT	scripts/receivepose_client.py	/^_CONNECTION_TIMEOUT = 10.0$/;"	v
+_HAND_TF	scripts/odh_l_pull.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/odh_l_push.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/odh_r_pull.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/odh_r_push.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/open_dishwasher.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/open_door_service.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/open_gripper.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/open_knobdoor_miguel.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/open_knobdoor_service.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/open_refdoor_service.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_HAND_TF	scripts/putdown_actionserver.py	/^_HAND_TF = 'hand_palm_link'$/;"	v
+_INV_PERSPECTIVE_TRANSFORM_SRV_NAME	scripts/givepose_client.py	/^_INV_PERSPECTIVE_TRANSFORM_SRV_NAME = '\/inverse_perspective_transform'$/;"	v
+_INV_PERSPECTIVE_TRANSFORM_SRV_NAME	scripts/nav_open_door_client.py	/^_INV_PERSPECTIVE_TRANSFORM_SRV_NAME = '\/inverse_perspective_transform'$/;"	v
+_INV_PERSPECTIVE_TRANSFORM_SRV_NAME	scripts/open_door_client.py	/^_INV_PERSPECTIVE_TRANSFORM_SRV_NAME = '\/inverse_perspective_transform'$/;"	v
+_INV_PERSPECTIVE_TRANSFORM_SRV_NAME	scripts/putdown_client.py	/^_INV_PERSPECTIVE_TRANSFORM_SRV_NAME = '\/inverse_perspective_transform'$/;"	v
+_INV_PERSPECTIVE_TRANSFORM_SRV_NAME	scripts/receivepose_client.py	/^_INV_PERSPECTIVE_TRANSFORM_SRV_NAME = '\/inverse_perspective_transform'$/;"	v
+_NAV_SRV_NAME	scripts/nav_open_door_client.py	/^_NAV_SRV_NAME = 'waypoint_go'$/;"	v
+_ODOM_TF	scripts/odh_l_pull.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/odh_l_push.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/odh_r_pull.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/odh_r_push.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/open_dishwasher.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/open_door_service.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/open_gripper.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/open_knobdoor_miguel.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/open_knobdoor_service.py	/^_ODOM_TF = 'map'$/;"	v
+_ODOM_TF	scripts/open_refdoor_service.py	/^_ODOM_TF = 'map'$/;"	v
+_OPENDOOR_SRV_NAME	scripts/nav_open_door_client.py	/^_OPENDOOR_SRV_NAME = 'open_door_service'$/;"	v
+_OPENDOOR_SRV_NAME	scripts/open_door_client.py	/^_OPENDOOR_SRV_NAME = 'open_door_service'$/;"	v
+_ORIGIN_TF	scripts/handover_activity.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/odh_l_pull.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/odh_l_push.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/odh_r_pull.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/odh_r_push.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/open_dishwasher.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/open_door_service.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/open_gripper.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/open_knobdoor_miguel.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/open_knobdoor_service.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/open_refdoor_service.py	/^_ORIGIN_TF ='map'$/;"	v
+_ORIGIN_TF	scripts/putdown_actionserver.py	/^_ORIGIN_TF ='map'$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/odh_l_pull.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/odh_l_push.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/odh_r_pull.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/odh_r_push.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/open_dishwasher.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/open_door_service.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/open_gripper.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/open_knobdoor_miguel.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/open_knobdoor_service.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_DEVIATION	scripts/open_refdoor_service.py	/^_PLANNING_GOAL_DEVIATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/odh_l_pull.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/odh_l_push.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/odh_r_pull.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/odh_r_push.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/open_dishwasher.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/open_door_service.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/open_gripper.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/open_knobdoor_miguel.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/open_knobdoor_service.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_GOAL_GENERATION	scripts/open_refdoor_service.py	/^_PLANNING_GOAL_GENERATION = 0.3$/;"	v
+_PLANNING_MAX_ITERATION	scripts/odh_l_pull.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/odh_l_push.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/odh_r_pull.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/odh_r_push.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/open_dishwasher.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/open_door_service.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/open_gripper.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/open_knobdoor_miguel.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/open_knobdoor_service.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_PLANNING_MAX_ITERATION	scripts/open_refdoor_service.py	/^_PLANNING_MAX_ITERATION = 10000$/;"	v
+_ROBOT_TF	scripts/odh_l_pull.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/odh_l_push.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/odh_r_pull.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/odh_r_push.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/open_dishwasher.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/open_door_service.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/open_gripper.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/open_knobdoor_miguel.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/open_knobdoor_service.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_ROBOT_TF	scripts/open_refdoor_service.py	/^_ROBOT_TF = 'base_footprint'$/;"	v
+_TARGET_POINT_X	scripts/givepose_client.py	/^_TARGET_POINT_X = 290.0$/;"	v
+_TARGET_POINT_X	scripts/nav_open_door_client.py	/^_TARGET_POINT_X = 290.0$/;"	v
+_TARGET_POINT_X	scripts/open_door_client.py	/^_TARGET_POINT_X = 290.0$/;"	v
+_TARGET_POINT_X	scripts/putdown_client.py	/^_TARGET_POINT_X = 290.0$/;"	v
+_TARGET_POINT_X	scripts/receivepose_client.py	/^_TARGET_POINT_X = 290.0$/;"	v
+_TARGET_POINT_Y	scripts/givepose_client.py	/^_TARGET_POINT_Y = 290.0$/;"	v
+_TARGET_POINT_Y	scripts/nav_open_door_client.py	/^_TARGET_POINT_Y = 290.0$/;"	v
+_TARGET_POINT_Y	scripts/open_door_client.py	/^_TARGET_POINT_Y = 290.0$/;"	v
+_TARGET_POINT_Y	scripts/putdown_client.py	/^_TARGET_POINT_Y = 290.0$/;"	v
+_TARGET_POINT_Y	scripts/receivepose_client.py	/^_TARGET_POINT_Y = 290.0$/;"	v
+_TF_TIMEOUT	scripts/odh_l_pull.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/odh_l_push.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/odh_r_pull.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/odh_r_push.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/open_dishwasher.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/open_door_service.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/open_gripper.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/open_knobdoor_miguel.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/open_knobdoor_service.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_TF_TIMEOUT	scripts/open_refdoor_service.py	/^_TF_TIMEOUT = 3.5$/;"	v
+_USE_JOINTS	scripts/odh_l_pull.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/odh_l_push.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/odh_r_pull.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/odh_r_push.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/open_dishwasher.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/open_door_service.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/open_gripper.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/open_knobdoor_miguel.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/open_knobdoor_service.py	/^_USE_JOINTS = ($/;"	v
+_USE_JOINTS	scripts/open_refdoor_service.py	/^_USE_JOINTS = ($/;"	v
+_VIEW_POSITIONS	scripts/givepose_client.py	/^_VIEW_POSITIONS = {'head_pan_joint': -1.0,$/;"	v
+_VIEW_POSITIONS	scripts/nav_open_door_client.py	/^_VIEW_POSITIONS = {'head_pan_joint': -1.0,$/;"	v
+_VIEW_POSITIONS	scripts/open_door_client.py	/^_VIEW_POSITIONS = {'head_pan_joint': -1.0,$/;"	v
+_VIEW_POSITIONS	scripts/putdown_client.py	/^_VIEW_POSITIONS = {'head_pan_joint': -1.0,$/;"	v
+_VIEW_POSITIONS	scripts/receivepose_client.py	/^_VIEW_POSITIONS = {'head_pan_joint': -1.0,$/;"	v
+__NOT_OCCUPIED	src/AlignRobotToSurface.h	/^const int __NOT_OCCUPIED = 0;$/;"	v
+__OCCUPIED	src/AlignRobotToSurface.h	/^const int __OCCUPIED = 1;$/;"	v
+__OUT_OF_BOUNDS	src/AlignRobotToSurface.h	/^const int __OUT_OF_BOUNDS = -1;$/;"	v
+__PI	src/AlignRobotToSurface.h	/^const double __PI = 3.1416;$/;"	v
+__ROBOT_FRAME	src/AlignRobotToSurface.h	/^const string __ROBOT_FRAME = "\/base_link";$/;"	v
+__SURFACE_DEVIATION_THRESHOLD	src/AlignRobotToSurface.h	/^const double __SURFACE_DEVIATION_THRESHOLD = 0.07; \/\/ m$/;"	v
+__WORLD_FRAME	src/AlignRobotToSurface.h	/^const string __WORLD_FRAME = "\/map";$/;"	v
+__ft_sensor_cb	scripts/odh_l_pull.py	/^    def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/odh_l_push.py	/^    def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/odh_r_pull.py	/^	def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/odh_r_push.py	/^    def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/open_dishwasher.py	/^    def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/open_knobdoor_miguel.py	/^	def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/open_knobdoor_service.py	/^	def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__ft_sensor_cb	scripts/open_refdoor_service.py	/^    def __ft_sensor_cb(self, data):$/;"	m	class:ForceSensorCapture	file:
+__init__	scripts/givepose_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:GivePoseAction
+__init__	scripts/handover_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:HandoverAction
+__init__	scripts/handover_activity.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/nav_open_door_client.py	/^        def __init__(self, wait=0.0):$/;"	m	class:TaskManager
+__init__	scripts/odh_l_pull.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/odh_l_pull.py	/^    def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/odh_l_push.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/odh_l_push.py	/^    def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/odh_r_pull.py	/^	def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/odh_r_pull.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/odh_r_push.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/odh_r_push.py	/^    def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/open_dishwasher.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/open_dishwasher.py	/^    def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/open_door_service.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/open_gripper.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/open_knobdoor_miguel.py	/^	def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/open_knobdoor_miguel.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/open_knobdoor_service.py	/^	def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/open_knobdoor_service.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/open_refdoor_service.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/open_refdoor_service.py	/^    def __init__(self):$/;"	m	class:ForceSensorCapture
+__init__	scripts/putdown_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:PutdownPoseAction
+__init__	scripts/receivepose_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:ReceivePoseAction
+__init__	scripts/wrist_tap_server	/^    def __init__(self, wait=0.0):$/;"	m	class:Wrist_Manager
+ac	src/manipulation_controller.h	/^	actionlib::SimpleActionClient<tmc_control_msgs::GripperApplyEffortAction> ac;$/;"	m	class:Manipulator
+action_timeout	include/villa_manipulation/manipulator.h	/^  float action_timeout = 10;$/;"	m	class:villa_manipulation::Manipulator
+alignAndCenterRobotToFrontObstacle	src/AlignRobotToSurface.h	/^    bool alignAndCenterRobotToFrontObstacle(double distance_to_obstacle = 0.1){$/;"	f	class:AlignRobotToSurface
+angular_weight	include/villa_manipulation/manipulator.h	/^  float angular_weight = 1.0;$/;"	m	class:villa_manipulation::Manipulator
+arm_client_	src/manipulation_controller.h	/^	Client arm_client_;$/;"	m	class:Manipulator
+arm_controller	include/villa_manipulation/manipulator.h	/^  TrajectoryController arm_controller;$/;"	m	class:villa_manipulation::Manipulator
+as_joint_map	include/villa_manipulation/manipulator.h	/^  JointStateMap as_joint_map(const sensor_msgs::JointState::ConstPtr &joint_states) {$/;"	f	class:villa_manipulation::Manipulator
+as_joint_state	include/villa_manipulation/manipulator.h	/^  sensor_msgs::JointState as_joint_state(const JointStateMap &jsm) {$/;"	f	class:villa_manipulation::Manipulator
+avoid	scripts/handover_actionserver.py	/^avoid = geometry_msgs.msg.Point()$/;"	v
+avoidalt	scripts/handover_actionserver.py	/^avoidalt = geometry_msgs.msg.Point()$/;"	v
+avoidaltt	scripts/handover_actionserver.py	/^avoidaltt = geometry_msgs.msg.Point()$/;"	v
+avoidt	scripts/handover_actionserver.py	/^avoidt = geometry_msgs.msg.Point()$/;"	v
+base_client_	src/manipulation_controller.h	/^	Client base_client_;$/;"	m	class:Manipulator
+base_controller	include/villa_manipulation/manipulator.h	/^  TrajectoryController base_controller;$/;"	m	class:villa_manipulation::Manipulator
+base_location_	include/sensor_capture.h	/^    geometry_msgs::Point base_location_;$/;"	m	class:OdometryCapture
+base_location_	include/villa_manipulation/sensor_capture.h	/^    geometry_msgs::Point base_location_;$/;"	m	class:OdometryCapture
+base_location_	src/sensor_capture.h	/^    geometry_msgs::Point base_location_;$/;"	m	class:OdometryCapture
+base_orientation_	include/sensor_capture.h	/^    geometry_msgs::Quaternion base_orientation_;$/;"	m	class:OdometryCapture
+base_orientation_	include/villa_manipulation/sensor_capture.h	/^    geometry_msgs::Quaternion base_orientation_;$/;"	m	class:OdometryCapture
+base_orientation_	src/sensor_capture.h	/^    geometry_msgs::Quaternion base_orientation_;$/;"	m	class:OdometryCapture
+calculate_variance	scripts/putdown_actionserver.py	/^    def calculate_variance(self, pre_force,cur_force):$/;"	m	class:PutdownPoseAction
+call_tsr_plan_service	scripts/odh_l_pull.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/odh_l_push.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/odh_r_pull.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/odh_r_push.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/open_dishwasher.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/open_door_service.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/open_gripper.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/open_knobdoor_miguel.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/open_knobdoor_service.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+call_tsr_plan_service	scripts/open_refdoor_service.py	/^def call_tsr_plan_service(whole_body, constraint_tsrs, goal_tsrs):$/;"	f
+client	include/villa_manipulation/manipulator.h	/^  Client client;$/;"	m	struct:TrajectoryController
+close_gripper	scripts/givepose_actionserver.py	/^    def close_gripper(self, to_width=-0.01):$/;"	m	class:GivePoseAction
+close_gripper	scripts/handover_actionserver.py	/^    def close_gripper(self, to_width=-0.01):$/;"	m	class:HandoverAction
+close_gripper	scripts/putdown_actionserver.py	/^    def close_gripper(self, to_width=-0.01):$/;"	m	class:PutdownPoseAction
+close_gripper	scripts/receivepose_actionserver.py	/^    def close_gripper(self, to_width=-0.01):$/;"	m	class:ReceivePoseAction
+close_gripper	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::close_gripper() {$/;"	f	class:villa_manipulation::Manipulator
+compute_new_location	src/libvilla_hsrb/manipulator.cpp	/^tf::Vector3 Manipulator::compute_new_location(tf::Vector3 rel_coords) {$/;"	f	class:villa_manipulation::Manipulator
+compute_new_location	src/manipulation_controller.cpp	/^tf::Vector3 Manipulator::compute_new_location(tf::Vector3 rel_coords) {$/;"	f	class:Manipulator
+constrain_trajectories	src/libvilla_hsrb/manipulator.cpp	/^boost::optional<trajectory_msgs::JointTrajectory> Manipulator::constrain_trajectories(const trajectory_msgs::JointTrajectory &trajectory) {$/;"	f	class:villa_manipulation::Manipulator
+ek	scripts/open_knobdoor_miguel.py	/^ek=math.pi\/2), geometry.pose(ei=math.pi\/2))$/;"	v
+ek	scripts/open_knobdoor_service.py	/^ek=math.pi\/2), geometry.pose(ei=math.pi\/2))$/;"	v
+execute_cb	scripts/givepose_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:GivePoseAction
+execute_cb	scripts/handover_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:HandoverAction
+execute_cb	scripts/putdown_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:PutdownPoseAction
+execute_cb	scripts/receivepose_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:ReceivePoseAction
+execute_trajectory	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::execute_trajectory(const trajectory_msgs::JointTrajectory &trajectory, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+executor_	src/grasp_server.cpp	/^GraspAction * executor_ = NULL;$/;"	v
+extract	src/libvilla_hsrb/manipulator.cpp	/^trajectory_msgs::JointTrajectory extract(const trajectory_msgs::JointTrajectory &trajectory, const std::vector<std::string> &joint_names, const sensor_msgs::JointState &joint_state) {$/;"	f	namespace:villa_manipulation
+forceSensorCallback	include/sensor_capture.h	/^    void forceSensorCallback(const geometry_msgs::WrenchStampedConstPtr& data) {$/;"	f	class:ForceSensorCapture
+forceSensorCallback	include/villa_manipulation/sensor_capture.h	/^    void forceSensorCallback(const geometry_msgs::WrenchStampedConstPtr& data) {$/;"	f	class:ForceSensorCapture
+forceSensorCallback	src/sensor_capture.h	/^    void forceSensorCallback(const geometry_msgs::WrenchStampedConstPtr& data) {$/;"	f	class:ForceSensorCapture
+force_callback	src/force_sensor_test.cpp	/^void force_callback(const geometry_msgs::WrenchStampedConstPtr& data) {$/;"	f
+force_data	src/grasp_server.cpp	/^    geometry_msgs::Vector3 force_data;$/;"	m	class:GraspAction	file:
+force_data_	include/sensor_capture.h	/^    geometry_msgs::Vector3 force_data_;$/;"	m	class:ForceSensorCapture
+force_data_	include/villa_manipulation/sensor_capture.h	/^    geometry_msgs::Vector3 force_data_;$/;"	m	class:ForceSensorCapture
+force_data_	src/force_sensor_test.cpp	/^geometry_msgs::Vector3 force_data_;$/;"	v
+force_data_	src/sensor_capture.h	/^    geometry_msgs::Vector3 force_data_;$/;"	m	class:ForceSensorCapture
+force_sensor_Cb	scripts/putdown_actionserver.py	/^    def force_sensor_Cb(self,msg):$/;"	m	class:PutdownPoseAction
+force_sensor_capture	src/grasp_server.cpp	/^    ForceSensorCapture force_sensor_capture;$/;"	m	class:GraspAction	file:
+getCurrentForce	include/sensor_capture.h	/^    void getCurrentForce(geometry_msgs::Vector3& force_data) const {$/;"	f	class:ForceSensorCapture
+getCurrentForce	include/villa_manipulation/sensor_capture.h	/^    void getCurrentForce(geometry_msgs::Vector3& force_data) const {$/;"	f	class:ForceSensorCapture
+getCurrentForce	src/sensor_capture.h	/^    void getCurrentForce(geometry_msgs::Vector3& force_data) const {$/;"	f	class:ForceSensorCapture
+getCurrentOdometry	include/sensor_capture.h	/^    void getCurrentOdometry(geometry_msgs::Point& location, geometry_msgs::Quaternion& orientation) const {$/;"	f	class:OdometryCapture
+getCurrentOdometry	include/villa_manipulation/sensor_capture.h	/^    void getCurrentOdometry(geometry_msgs::Point& location, geometry_msgs::Quaternion& orientation) const {$/;"	f	class:OdometryCapture
+getCurrentOdometry	src/sensor_capture.h	/^    void getCurrentOdometry(geometry_msgs::Point& location, geometry_msgs::Quaternion& orientation) const {$/;"	f	class:OdometryCapture
+getCurrentWeight	src/grasp_server.cpp	/^    double getCurrentWeight() {$/;"	f	class:GraspAction
+get_cell_occupancy	src/AlignRobotToSurface.h	/^    int get_cell_occupancy(int i, int j) {$/;"	f	class:AlignRobotToSurface
+get_current_force	scripts/odh_l_pull.py	/^    def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/odh_l_push.py	/^    def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/odh_r_pull.py	/^	def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/odh_r_push.py	/^    def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/open_dishwasher.py	/^    def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/open_knobdoor_miguel.py	/^	def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/open_knobdoor_service.py	/^	def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_current_force	scripts/open_refdoor_service.py	/^    def get_current_force(self):$/;"	m	class:ForceSensorCapture
+get_joint_state	src/libvilla_hsrb/manipulator.cpp	/^float Manipulator::get_joint_state(const std::string &name) {$/;"	f	class:villa_manipulation::Manipulator
+get_joint_state	src/manipulation_controller.cpp	/^float Manipulator::get_joint_state(const std::string &name) {$/;"	f	class:Manipulator
+get_relative_tuples	scripts/odh_l_pull.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/odh_l_push.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/odh_r_pull.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/odh_r_push.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/open_dishwasher.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/open_door_service.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/open_gripper.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/open_knobdoor_miguel.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/open_knobdoor_service.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_relative_tuples	scripts/open_refdoor_service.py	/^def get_relative_tuples(base_frame, target_frame):$/;"	f
+get_trajectory_state	include/villa_manipulation/manipulator.h	/^  control_msgs::QueryTrajectoryState get_trajectory_state(const std::string &name) {$/;"	f	class:villa_manipulation::Manipulator
+get_trajectory_state	src/manipulation_controller.h	/^    control_msgs::QueryTrajectoryState get_trajectory_state(std::string name) {$/;"	f	class:Manipulator
+get_transform	src/transform_utils.cpp	/^tf::StampedTransform get_transform(const std::string target, const std::string source) {$/;"	f
+get_world_to_robot_angle	src/AlignRobotToSurface.h	/^    double get_world_to_robot_angle(){$/;"	f	class:AlignRobotToSurface
+go_to	scripts/handover_activity.py	/^def go_to(req):$/;"	f
+goal	scripts/handover_tester.py	/^goal = HandoverGoal()$/;"	v
+good	scripts/handover_actionserver.py	/^good = geometry_msgs.msg.Point()$/;"	v
+goodalt	scripts/handover_actionserver.py	/^goodalt = geometry_msgs.msg.Point()$/;"	v
+goodaltt	scripts/handover_actionserver.py	/^goodaltt = geometry_msgs.msg.Point()$/;"	v
+goodt	scripts/handover_actionserver.py	/^goodt = geometry_msgs.msg.Point()$/;"	v
+grabbag_server	scripts/handover_activity.py	/^def grabbag_server():$/;"	f
+grasp	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::grasp(double effort) {$/;"	f	class:villa_manipulation::Manipulator
+grasp	src/manipulation_controller.cpp	/^bool Manipulator::grasp() {$/;"	f	class:Manipulator
+grasp_point_callback	scripts/handover_activity.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/odh_l_pull.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/odh_l_push.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/odh_r_pull.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/odh_r_push.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_dishwasher.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_door_client.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_door_service.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_gripper.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_knobdoor_miguel.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_knobdoor_service.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_callback	scripts/open_refdoor_service.py	/^def grasp_point_callback(msg):$/;"	f
+grasp_point_client	scripts/handover_activity.py	/^def grasp_point_client(avoid,good):$/;"	f
+grasp_point_client	scripts/odh_l_pull.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/odh_l_push.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/odh_r_pull.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/odh_r_push.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/open_dishwasher.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/open_door_service.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/open_gripper.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/open_knobdoor_miguel.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/open_knobdoor_service.py	/^def grasp_point_client():$/;"	f
+grasp_point_client	scripts/open_refdoor_service.py	/^def grasp_point_client():$/;"	f
+gripper_client_	src/manipulation_controller.h	/^	Client gripper_client_;$/;"	m	class:Manipulator
+gripper_controller	include/villa_manipulation/manipulator.h	/^  TrajectoryController gripper_controller;$/;"	m	class:villa_manipulation::Manipulator
+gripper_effort_client	include/villa_manipulation/manipulator.h	/^  actionlib::SimpleActionClient<tmc_control_msgs::GripperApplyEffortAction> gripper_effort_client;$/;"	m	class:villa_manipulation::Manipulator
+gripper_has_object	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::gripper_has_object() { \/\/TODO Maybe different for different robot$/;"	f	class:villa_manipulation::Manipulator
+gripper_has_object	src/manipulation_controller.h	/^    bool gripper_has_object(){ \/\/TODO Maybe different for different robot$/;"	f	class:Manipulator
+hand_pos	scripts/odh_l_pull.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/odh_l_push.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/odh_r_pull.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/odh_r_push.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/open_dishwasher.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/open_knobdoor_miguel.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/open_knobdoor_service.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_pos	scripts/open_refdoor_service.py	/^hand_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+hand_service	scripts/handover_activity.py	/^hand_service = rospy.ServiceProxy("\/openpose\/hand_positions",GetHandPositions)$/;"	v
+handle_received	scripts/open_knobdoor_miguel.py	/^handle_received=False$/;"	v
+handoverClient	scripts/handover_tester.py	/^handoverClient = actionlib.SimpleActionClient('handover_action', HandoverAction)$/;"	v
+head_client_	src/manipulation_controller.h	/^	Client head_client_;$/;"	m	class:Manipulator
+head_controller	include/villa_manipulation/manipulator.h	/^  TrajectoryController head_controller;$/;"	m	class:villa_manipulation::Manipulator
+in_simulation	include/villa_manipulation/manipulator.h	/^  bool in_simulation;$/;"	m	class:villa_manipulation::Manipulator
+initialize	src/grasp_server.cpp	/^    bool initialize() {$/;"	f	class:GraspAction
+inspect_cb	scripts/wrist_tap_client	/^def inspect_cb(req):$/;"	f
+inspection_task_server	scripts/wrist_tap_client	/^def inspection_task_server(robot):$/;"	f
+joint_names	include/villa_manipulation/manipulator.h	/^  std::vector<std::string> joint_names;$/;"	m	struct:TrajectoryController
+joint_planning_client	include/villa_manipulation/manipulator.h	/^  ros::ServiceClient joint_planning_client;$/;"	m	class:villa_manipulation::Manipulator
+joint_state_Cb	scripts/putdown_actionserver.py	/^    def joint_state_Cb(self, msg):$/;"	m	class:PutdownPoseAction
+joint_states_	include/villa_manipulation/manipulator.h	/^  sensor_msgs::JointState::ConstPtr joint_states_;$/;"	m	class:villa_manipulation::Manipulator
+joint_states_	src/manipulation_controller.h	/^        std::map<std::string, float> joint_states_;$/;"	m	class:Manipulator
+joint_states_callback	scripts/odh_l_pull.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/odh_l_push.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/odh_r_pull.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/odh_r_push.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/open_dishwasher.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/open_door_service.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/open_gripper.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/open_knobdoor_miguel.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/open_knobdoor_service.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_callback	scripts/open_refdoor_service.py	/^def joint_states_callback(msg):$/;"	f
+joint_states_sub_	include/villa_manipulation/manipulator.h	/^  ros::Subscriber joint_states_sub_;$/;"	m	class:villa_manipulation::Manipulator
+joint_states_sub_	src/manipulation_controller.h	/^    ros::Subscriber joint_states_sub_;$/;"	m	class:Manipulator
+latest_positions	scripts/givepose_client.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/odh_l_pull.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/odh_l_push.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/odh_r_pull.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/odh_r_push.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_dishwasher.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_door_client.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_door_service.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_gripper.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_knobdoor_miguel.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_knobdoor_service.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/open_refdoor_service.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/putdown_client.py	/^latest_positions = None$/;"	v
+latest_positions	scripts/receivepose_client.py	/^latest_positions = None$/;"	v
+left_pos	scripts/handover_activity.py	/^left_pos = geometry_msgs.msg.Point()$/;"	v
+left_pos_f	scripts/handover_activity.py	/^left_pos_f = geometry_msgs.msg.Point()$/;"	v
+linear_weight	include/villa_manipulation/manipulator.h	/^  float linear_weight = 3.0;$/;"	m	class:villa_manipulation::Manipulator
+list_controllers_client	include/villa_manipulation/manipulator.h	/^  ros::ServiceClient list_controllers_client;$/;"	m	class:villa_manipulation::Manipulator
+listener	scripts/putdown_actionserver.py	/^	listener = tf.TransformListener()$/;"	v	class:PutdownPoseAction
+listener	scripts/wrist_tap_server	/^    def listener(self):$/;"	m	class:Wrist_Manager
+localize_handle	scripts/handover_activity.py	/^localize_handle = rospy.ServiceProxy('\/track_handle',objectfinder)$/;"	v
+main	src/force_sensor_test.cpp	/^int main(int argc, char** argv) {$/;"	f
+main	src/grasp_executor.cpp	/^int main(int argc, char ** argv){$/;"	f
+main	src/grasp_server.cpp	/^int main(int argc, char**argv) {$/;"	f
+main	src/hsrb_wrapper_tester.cpp	/^int main(int argc, char**argv) {$/;"	f
+main	src/simple_collision_check.cpp	/^int main(int argc, char** argv) {$/;"	f
+mains	scripts/givepose_client.py	/^def mains():$/;"	f
+mains	scripts/nav_open_door_client.py	/^        def mains(self):$/;"	m	class:TaskManager
+mains	scripts/open_door_client.py	/^def mains():$/;"	f
+mains	scripts/putdown_client.py	/^def mains():$/;"	f
+mains	scripts/receivepose_client.py	/^def mains():$/;"	f
+manipulator	src/grasp_server.cpp	/^    Manipulator manipulator;$/;"	m	class:GraspAction	file:
+manipulator_	src/AlignRobotToSurface.h	/^    Manipulator manipulator_;$/;"	m	class:AlignRobotToSurface
+marker_pub_	src/AlignRobotToSurface.h	/^    ros::Publisher marker_pub_;$/;"	m	class:AlignRobotToSurface
+max_planning_iterations	include/villa_manipulation/manipulator.h	/^  uint max_planning_iterations = 100000;$/;"	m	class:villa_manipulation::Manipulator
+max_planning_time	include/villa_manipulation/manipulator.h	/^  float max_planning_time = 10;$/;"	m	class:villa_manipulation::Manipulator
+moveToPerceptionPose	src/grasp_server.cpp	/^    bool moveToPerceptionPose() {$/;"	f	class:GraspAction
+move_arm	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_arm(double arm_height, double arm_angle, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_arm	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_arm(double arm_height, double arm_angle, double duration, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_arm	src/manipulation_controller.cpp	/^bool Manipulator::move_arm(double arm_height, double arm_angle) {$/;"	f	class:Manipulator
+move_arm	src/manipulation_controller.cpp	/^bool Manipulator::move_arm(double arm_height, double arm_angle, double duration) {$/;"	f	class:Manipulator
+move_arm_and_hand	src/libvilla_hsrb/manipulator.cpp	/^Manipulator::move_arm_and_hand(double arm_height, double arm_angle, double hand_angle, double duration, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_arm_and_hand	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_arm_and_hand(double arm_height, double arm_angle, double hand_angle, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_arm_and_hand	src/manipulation_controller.cpp	/^bool Manipulator::move_arm_and_hand(double arm_height, double arm_angle, double hand_angle) {$/;"	f	class:Manipulator
+move_arm_and_hand	src/manipulation_controller.cpp	/^bool Manipulator::move_arm_and_hand(double arm_height, double arm_angle, double hand_angle, double duration) {$/;"	f	class:Manipulator
+move_base_relative	src/libvilla_hsrb/manipulator.cpp	/^Manipulator::move_base_relative(double x, double y, double theta,$/;"	f	class:villa_manipulation::Manipulator
+move_base_relative	src/manipulation_controller.cpp	/^bool Manipulator::move_base_relative(double x_relative_to_base, double y_relative_to_base, double turn_relative_to_base) {$/;"	f	class:Manipulator
+move_base_relative	src/manipulation_controller.cpp	/^bool Manipulator::move_base_relative(double x_relative_to_base, double y_relative_to_base, double turn_relative_to_base, double duration) {$/;"	f	class:Manipulator
+move_gripper	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_gripper(double amount, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_gripper	src/manipulation_controller.cpp	/^bool Manipulator::move_gripper(bool isClosed) {$/;"	f	class:Manipulator
+move_gripper	src/manipulation_controller.cpp	/^bool Manipulator::move_gripper(double amount) {$/;"	f	class:Manipulator
+move_head	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_head(double pan_angle, double tilt_angle, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_head	src/manipulation_controller.cpp	/^bool Manipulator::move_head(double pan_angle, double tilt_angle) {$/;"	f	class:Manipulator
+move_to_go	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_to_go(bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_to_joint_positions	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_to_joint_positions(const JointStateMap &target, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_to_joint_positions_unsafe	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_to_joint_positions_unsafe(const JointStateMap &goal_map, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_to_neutral	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::move_to_neutral(bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+move_whole_arm	src/manipulation_controller.cpp	/^bool Manipulator::move_whole_arm(double arm_lift, double arm_flex, double arm_roll, double wrist_flex, double wrist_roll) {$/;"	f	class:Manipulator
+move_whole_arm	src/manipulation_controller.cpp	/^bool Manipulator::move_whole_arm(double arm_lift, double arm_flex, double arm_roll, double wrist_flex, double wrist_roll, double duration) {$/;"	f	class:Manipulator
+name	include/villa_manipulation/manipulator.h	/^  const std::string name;$/;"	m	struct:TrajectoryController
+navi_service_client	scripts/odh_l_pull.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/odh_l_push.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/odh_r_pull.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/odh_r_push.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/open_dishwasher.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/open_door_service.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/open_gripper.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/open_knobdoor_miguel.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/open_knobdoor_service.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+navi_service_client	scripts/open_refdoor_service.py	/^def navi_service_client(x_,y_,theta_):$/;"	f
+nh_	include/villa_manipulation/manipulator.h	/^  ros::NodeHandle nh_;$/;"	m	class:villa_manipulation::Manipulator
+nh_	include/villa_manipulation/sensor_capture.h	/^    ros::NodeHandle nh_;$/;"	m	class:ForceSensorCapture
+nh_	include/villa_manipulation/sensor_capture.h	/^    ros::NodeHandle nh_;$/;"	m	class:OdometryCapture
+nh_	src/AlignRobotToSurface.h	/^    ros::NodeHandle& nh_;$/;"	m	class:AlignRobotToSurface
+nh_	src/grasp_server.cpp	/^    ros::NodeHandle nh_;$/;"	m	class:GraspAction	file:
+nh_	src/manipulation_controller.h	/^	ros::NodeHandle& nh_;$/;"	m	class:Manipulator
+obstacle_map_	src/AlignRobotToSurface.h	/^	nav_msgs::OccupancyGridConstPtr obstacle_map_ = NULL;$/;"	m	class:AlignRobotToSurface
+obstacle_map_callback	src/AlignRobotToSurface.h	/^    void obstacle_map_callback(const nav_msgs::OccupancyGridConstPtr& obstacle_map_msg){$/;"	f	class:AlignRobotToSurface
+obstacle_map_sub_	src/AlignRobotToSurface.h	/^    ros::Subscriber obstacle_map_sub_;$/;"	m	class:AlignRobotToSurface
+odom_	include/villa_manipulation/manipulator.h	/^  OdometryCapture odom_;$/;"	m	class:villa_manipulation::Manipulator
+odom_	src/manipulation_controller.h	/^    	OdometryCapture odom_;$/;"	m	class:Manipulator
+odom_sub_	include/sensor_capture.h	/^    ros::Subscriber odom_sub_;$/;"	m	class:OdometryCapture
+odom_sub_	include/villa_manipulation/sensor_capture.h	/^    ros::Subscriber odom_sub_;$/;"	m	class:OdometryCapture
+odom_sub_	src/sensor_capture.h	/^    ros::Subscriber odom_sub_;$/;"	m	class:OdometryCapture
+odometryCallback	include/sensor_capture.h	/^    void odometryCallback(const nav_msgs::OdometryConstPtr& data) {$/;"	f	class:OdometryCapture
+odometryCallback	include/villa_manipulation/sensor_capture.h	/^    void odometryCallback(const nav_msgs::OdometryConstPtr& data) {$/;"	f	class:OdometryCapture
+odometryCallback	src/sensor_capture.h	/^    void odometryCallback(const nav_msgs::OdometryConstPtr& data) {$/;"	f	class:OdometryCapture
+open_gripper	scripts/givepose_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:GivePoseAction
+open_gripper	scripts/handover_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:HandoverAction
+open_gripper	scripts/putdown_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:PutdownPoseAction
+open_gripper	scripts/receivepose_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:ReceivePoseAction
+open_gripper	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::open_gripper() {$/;"	f	class:villa_manipulation::Manipulator
+opendoor	scripts/odh_l_pull.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/odh_l_push.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/odh_r_pull.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/odh_r_push.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/open_dishwasher.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/open_door_service.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/open_gripper.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/open_knobdoor_miguel.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/open_knobdoor_service.py	/^def opendoor(req):$/;"	f
+opendoor	scripts/open_refdoor_service.py	/^def opendoor(req):$/;"	f
+opendoor_server	scripts/odh_l_pull.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/odh_l_push.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/odh_r_pull.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/odh_r_push.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/open_dishwasher.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/open_door_service.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/open_gripper.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/open_knobdoor_miguel.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/open_knobdoor_service.py	/^def opendoor_server():$/;"	f
+opendoor_server	scripts/open_refdoor_service.py	/^def opendoor_server():$/;"	f
+operator <	include/villa_manipulation/manipulator.h	/^  inline bool operator < (const TrajectoryController &rhs) const {$/;"	f	struct:TrajectoryController
+operator <	include/villa_manipulation/manipulator.h	/^inline bool operator < (const std::reference_wrapper<TrajectoryController> &lhs, const std::reference_wrapper<TrajectoryController> &rhs) {$/;"	f
+pc_cb	src/simple_collision_check.cpp	/^void pc_cb(const sensor_msgs::PointCloud2ConstPtr& msg) {$/;"	f
+perceptionPose	src/grasp_server.cpp	/^void perceptionPose(const villa_manipulation::PerceptionPoseGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::PerceptionPoseAction> * as) {$/;"	f
+pickUp	src/grasp_server.cpp	/^    bool pickUp(geometry_msgs::Point object_location) {$/;"	f	class:GraspAction
+pickUp	src/grasp_server.cpp	/^void pickUp(const villa_manipulation::PickUpGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::PickUpAction> * as) {$/;"	f
+pickUpCutlery	src/grasp_server.cpp	/^    bool pickUpCutlery(geometry_msgs::Point object_location, geometry_msgs::Vector3 orientation) {$/;"	f	class:GraspAction
+pickUpCutlery	src/grasp_server.cpp	/^void pickUpCutlery(const villa_manipulation::PickUpCutleryGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::PickUpCutleryAction> * as) {$/;"	f
+pickUpPlate	src/grasp_server.cpp	/^    bool pickUpPlate(geometry_msgs::Point object_location, geometry_msgs::Vector3 orientation, double radius) {$/;"	f	class:GraspAction
+pickUpPlate	src/grasp_server.cpp	/^void pickUpPlate(const villa_manipulation::PickUpPlateGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::PickUpPlateAction> * as) {$/;"	f
+planning_goal_deviation	include/villa_manipulation/manipulator.h	/^  float planning_goal_deviation = 0.3f;$/;"	m	class:villa_manipulation::Manipulator
+planning_goal_generation	include/villa_manipulation/manipulator.h	/^  float planning_goal_generation = 0.3f;$/;"	m	class:villa_manipulation::Manipulator
+position_controllers	include/villa_manipulation/manipulator.h	/^  std::vector<std::reference_wrapper<TrajectoryController>> position_controllers;$/;"	m	class:villa_manipulation::Manipulator
+print_vector	src/grasp_server.cpp	/^    void print_vector(std::string name, tf::Vector3& vector) {$/;"	f	class:GraspAction
+publish_arm	scripts/odh_l_pull.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/odh_l_push.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/odh_r_pull.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/odh_r_push.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/open_dishwasher.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/open_door_service.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/open_gripper.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/open_knobdoor_miguel.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/open_knobdoor_service.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+publish_arm	scripts/open_refdoor_service.py	/^def publish_arm(lift, flex,roll,wrist_flex,wrist_roll):$/;"	f
+putDown	src/grasp_server.cpp	/^    bool putDown(geometry_msgs::Point place_location) {$/;"	f	class:GraspAction
+putDown	src/grasp_server.cpp	/^void putDown(const villa_manipulation::PutDownGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::PutDownAction> * as) {$/;"	f
+putDownDishwasher	src/grasp_server.cpp	/^    bool putDownDishwasher(const geometry_msgs::Point& place_location, const string& type) {$/;"	f	class:GraspAction
+putDownDishwasher	src/grasp_server.cpp	/^void putDownDishwasher(const villa_manipulation::PutDownDishwasherGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::PutDownDishwasherAction> * as) {$/;"	f
+received_obstacle_map	src/AlignRobotToSurface.h	/^    bool received_obstacle_map(){$/;"	f	class:AlignRobotToSurface
+recog_pos	scripts/givepose_client.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/handover_actionserver.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/handover_activity.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/odh_l_pull.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/odh_l_push.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/odh_r_pull.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/odh_r_push.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_dishwasher.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_door_client.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_door_service.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_gripper.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_knobdoor_miguel.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_knobdoor_service.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/open_refdoor_service.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/putdown_client.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos	scripts/receivepose_client.py	/^recog_pos = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/handover_activity.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/odh_l_pull.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/odh_l_push.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/odh_r_pull.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/odh_r_push.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/open_dishwasher.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/open_knobdoor_miguel.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/open_knobdoor_service.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+recog_pos2	scripts/open_refdoor_service.py	/^recog_pos2 = geometry_msgs.msg.PoseStamped()$/;"	v
+resting_weight	src/grasp_server.cpp	/^    double resting_weight;$/;"	m	class:GraspAction	file:
+right_pos	scripts/handover_activity.py	/^right_pos = geometry_msgs.msg.Point()$/;"	v
+right_pos_f	scripts/handover_activity.py	/^right_pos_f = geometry_msgs.msg.Point()$/;"	v
+rise_arm	src/manipulation_controller.cpp	/^bool Manipulator::rise_arm(double arm_height) {$/;"	f	class:Manipulator
+rise_arm	src/manipulation_controller.cpp	/^bool Manipulator::rise_arm(double arm_height, double duration) {$/;"	f	class:Manipulator
+robot	scripts/givepose_actionserver.py	/^    robot = Robot()$/;"	v
+robot	scripts/handover_actionserver.py	/^    robot = Robot()$/;"	v
+robot	scripts/handover_activity.py	/^	robot = setRobot()$/;"	v
+robot	scripts/open_door_service.py	/^        robot = setRobot()$/;"	v
+robot	scripts/open_gripper.py	/^        robot = setRobot()$/;"	v
+robot	scripts/putdown_actionserver.py	/^    robot = Robot()$/;"	v
+robot	scripts/receivepose_actionserver.py	/^    robot = Robot()$/;"	v
+robot	scripts/wrist_tap_client	/^    robot = Robot()$/;"	v
+robot_aligner	src/grasp_server.cpp	/^    AlignRobotToSurface robot_aligner;$/;"	m	class:GraspAction	file:
+round_double_to_int	src/AlignRobotToSurface.h	/^    int round_double_to_int(double d){$/;"	f	class:AlignRobotToSurface
+rrobot	scripts/odh_l_pull.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/odh_l_push.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/odh_r_pull.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/odh_r_push.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/open_dishwasher.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/open_knobdoor_miguel.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/open_knobdoor_service.py	/^	rrobot = setRobot()$/;"	v
+rrobot	scripts/open_refdoor_service.py	/^	rrobot = setRobot()$/;"	v
+scanShelf	src/grasp_server.cpp	/^    bool scanShelf() {$/;"	f	class:GraspAction
+scanShelf	src/grasp_server.cpp	/^void scanShelf(const villa_manipulation::ScanShelfGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::ScanShelfAction> * as) {$/;"	f
+server	scripts/givepose_actionserver.py	/^    server = GivePoseAction('givepose_action', robot)$/;"	v
+server	scripts/handover_actionserver.py	/^    server = HandoverAction('handover_action', robot)$/;"	v
+server	scripts/putdown_actionserver.py	/^    server = PutdownPoseAction('putdown_action', robot)$/;"	v
+server	scripts/receivepose_actionserver.py	/^    server = ReceivePoseAction('receivepose_action', robot)$/;"	v
+setDown	src/grasp_server.cpp	/^    void setDown() {$/;"	f	class:GraspAction
+setDown	src/grasp_server.cpp	/^    void setDown(double shoulder_angle) {$/;"	f	class:GraspAction
+setRobot	scripts/handover_activity.py	/^class setRobot:$/;"	c
+setRobot	scripts/odh_l_pull.py	/^class setRobot:$/;"	c
+setRobot	scripts/odh_l_push.py	/^class setRobot:$/;"	c
+setRobot	scripts/odh_r_pull.py	/^class setRobot:$/;"	c
+setRobot	scripts/odh_r_push.py	/^class setRobot:$/;"	c
+setRobot	scripts/open_dishwasher.py	/^class setRobot:$/;"	c
+setRobot	scripts/open_door_service.py	/^class setRobot:$/;"	c
+setRobot	scripts/open_gripper.py	/^class setRobot:$/;"	c
+setRobot	scripts/open_knobdoor_miguel.py	/^class setRobot:$/;"	c
+setRobot	scripts/open_knobdoor_service.py	/^class setRobot:$/;"	c
+setRobot	scripts/open_refdoor_service.py	/^class setRobot:$/;"	c
+set_arm_joint_state	src/manipulation_controller.cpp	/^bool Manipulator::set_arm_joint_state(const std::string& joint_name, double joint_value) {$/;"	f	class:Manipulator
+set_arm_joint_state	src/manipulation_controller.cpp	/^bool Manipulator::set_arm_joint_state(const std::string& joint_name, double joint_value, double duration) {$/;"	f	class:Manipulator
+setdown	scripts/putdown_actionserver.py	/^    def setdown(self):$/;"	m	class:PutdownPoseAction
+simple_collision_check	src/simple_collision_check.cpp	/^bool simple_collision_check(const sensor_msgs::PointCloud2ConstPtr& msg, float start = 0.0, float finish = 0.69, int tolerance = 50) {$/;"	f
+slide_base	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::slide_base(double x, double y, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+slide_base	src/manipulation_controller.cpp	/^bool Manipulator::slide_base(double x, double y) {$/;"	f	class:Manipulator
+slide_base	src/manipulation_controller.cpp	/^bool Manipulator::slide_base(double x, double y, double duration) {$/;"	f	class:Manipulator
+slightlyRiseUpArm	src/grasp_server.cpp	/^    void slightlyRiseUpArm(double shoulder_angle){$/;"	f	class:GraspAction
+srv_list_controllers_	src/manipulation_controller.h	/^	ros::ServiceClient srv_list_controllers_;$/;"	m	class:Manipulator
+task_manager	scripts/nav_open_door_client.py	/^    task_manager = TaskManager()$/;"	v	class:TaskManager
+test_armmotion	scripts/putdown_actionserver.py	/^    def test_armmotion(self):$/;"	m	class:PutdownPoseAction
+toPlusMinusPiHalvesRange	src/grasp_server.cpp	/^    double toPlusMinusPiHalvesRange(double angle){$/;"	f	class:GraspAction
+transform_listener_	src/AlignRobotToSurface.h	/^    tf::TransformListener transform_listener_;$/;"	m	class:AlignRobotToSurface
+transform_vec	src/transform_utils.cpp	/^tf::Vector3 transform_vec(tf::Vector3 vector, const std::string target, const std::string source) {$/;"	f
+trigger	scripts/wrist_tap_server	/^    def trigger(self,req):$/;"	m	class:Wrist_Manager
+turn_base	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::turn_base(double turn, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
+turn_base	src/manipulation_controller.cpp	/^bool Manipulator::turn_base(double turn) {$/;"	f	class:Manipulator
+turn_base	src/manipulation_controller.cpp	/^bool Manipulator::turn_base(double turn, double duration) {$/;"	f	class:Manipulator
+tw	scripts/open_knobdoor_miguel.py	/^		tw = geometry_msgs.msg.Twist()$/;"	v
+tw	scripts/open_knobdoor_service.py	/^		tw = geometry_msgs.msg.Twist()$/;"	v
+updateJointStates	include/villa_manipulation/manipulator.h	/^  void updateJointStates(const sensor_msgs::JointState::ConstPtr &joint_states) {$/;"	f	class:villa_manipulation::Manipulator
+updateJointStates	src/manipulation_controller.h	/^    void updateJointStates(const sensor_msgs::JointState::ConstPtr &joint_states){$/;"	f	class:Manipulator
+vel_pub	scripts/open_knobdoor_miguel.py	/^	vel_pub = rospy.Publisher('\/hsrb\/command_velocity', geometry_msgs.msg.Twist, queue_size=10)$/;"	v
+vel_pub	scripts/open_knobdoor_service.py	/^	vel_pub = rospy.Publisher('\/hsrb\/command_velocity', geometry_msgs.msg.Twist, queue_size=10)$/;"	v
+villa_manipulation	include/villa_manipulation/manipulator.h	/^namespace villa_manipulation {$/;"	n
+villa_manipulation	src/libvilla_hsrb/manipulator.cpp	/^namespace villa_manipulation {$/;"	n	file:
+wait_for_action	include/villa_manipulation/manipulator.h	/^  bool wait_for_action(Client &client) {$/;"	f	class:villa_manipulation::Manipulator
+wait_for_action	src/manipulation_controller.h	/^	void wait_for_action(Client * client) {$/;"	f	class:Manipulator
+wait_for_controller	include/villa_manipulation/manipulator.h	/^  void wait_for_controller(const std::string &name) {$/;"	f	class:villa_manipulation::Manipulator
+wait_for_controller	src/manipulation_controller.h	/^	void wait_for_controller(std::string name) {$/;"	f	class:Manipulator
+wait_for_controllers	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::wait_for_controllers(const set<std::reference_wrapper<TrajectoryController>> &controllers) {$/;"	f	class:villa_manipulation::Manipulator
+wait_for_data	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::wait_for_data(double timeout) {$/;"	f	class:villa_manipulation::Manipulator
+waypoint_navi_service	scripts/nav_open_door_client.py	/^        def waypoint_navi_service(self,goal_str):$/;"	m	class:TaskManager
+whole_body_timeopt_filter_client	include/villa_manipulation/manipulator.h	/^  ros::ServiceClient whole_body_timeopt_filter_client;$/;"	m	class:villa_manipulation::Manipulator
+wrist_manager	scripts/wrist_tap_server	/^    wrist_manager=Wrist_Manager()$/;"	v	class:Wrist_Manager
+wrist_trigger	scripts/wrist_tap_client	/^def wrist_trigger():$/;"	f
+wrist_trigger_callback	scripts/wrist_tap_server	/^    def wrist_trigger_callback(self,msg):$/;"	m	class:Wrist_Manager
+wrist_trigger_server	scripts/wrist_tap_server	/^    def wrist_trigger_server(self):$/;"	m	class:Wrist_Manager
+wrist_wrench_sub_	include/sensor_capture.h	/^    ros::Subscriber wrist_wrench_sub_;$/;"	m	class:ForceSensorCapture
+wrist_wrench_sub_	include/villa_manipulation/sensor_capture.h	/^    ros::Subscriber wrist_wrench_sub_;$/;"	m	class:ForceSensorCapture
+wrist_wrench_sub_	src/sensor_capture.h	/^    ros::Subscriber wrist_wrench_sub_;$/;"	m	class:ForceSensorCapture
+~GraspAction	src/grasp_server.cpp	/^    ~GraspAction(void){}$/;"	f	class:GraspAction
+~Manipulator	include/villa_manipulation/manipulator.h	/^  ~Manipulator() {$/;"	f	class:villa_manipulation::Manipulator
