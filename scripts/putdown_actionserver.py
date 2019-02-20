@@ -272,8 +272,16 @@ class PutdownPoseAction(object):
         rospy.loginfo("--------------finished")
         self.open_gripper()
 
-        rospy.sleep(1)
-        self.base.go_rel(-0.25,0.0,0)
+        # rospy.sleep(1)
+        # try:
+          # self.base.go_rel(-0.25,0.0,0)
+        # except:
+        # rospy.loginfo("fail")
+        tw = geometry_msgs.msg.Twist()
+        tw.linear.x =-0.6
+        self.vel_pub.publish(tw)
+
+        # self.base.go_rel(-0.25,0.0,0)
         rospy.sleep(1)
         self.body.move_to_neutral()
 
