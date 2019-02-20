@@ -47,10 +47,13 @@ class PutdownPoseAction(object):
         self.target_pose.pose.position.x=0.95
         self.target_pose.pose.position.y=-0.0
         self.target_pose.pose.position.z=0.85
+
         self.target_height=self.target_pose.pose.position.z
         self.target_pose.header.frame_id=_ORIGIN_TF
         self.target_pose.pose.position.z+=HEIGHT_OFFSET_Z
        
+        self.as_result= villa_manipulation.msg.ForcePutDownResult()
+        self.as_result.touched=False 
 	# self.switch = ImpedanceControlSwitch() 
         # self.switch.inactivate()
         self.cli= actionlib.SimpleActionClient('/move_base/move', MoveBaseAction)
@@ -58,7 +61,6 @@ class PutdownPoseAction(object):
 
         jointstates_topic='hsrb/joint_states'
 	rospy.Subscriber(jointstates_topic, JointState, self.joint_state_Cb)
-
         force_sensor_topic='hsrb/wrist_wrench/raw'
 	rospy.Subscriber(force_sensor_topic, WrenchStamped, self.force_sensor_Cb)
 
@@ -87,6 +89,7 @@ class PutdownPoseAction(object):
         # self.target_pose.pose.position.y=-0.0
         # self.target_pose.pose.position.z=0.84
         # self.target_height=self.target_pose.pose.position.z
+        self.target_height=self.target_pose.pose.position.z
         self.target_pose.header.frame_id=_ORIGIN_TF
         self.target_pose.pose.position.z+=HEIGHT_OFFSET_Z
         self.test_armmotion();
@@ -112,13 +115,13 @@ class PutdownPoseAction(object):
         # self.body.move_to_neutral()
         # rospy.sleep(2)
 
-        self._as.set_succeeded()
+        self._as.set_succeeded(self.as_result)
 
     def test_armmotion(self):
         # transvec_from_position_arm = 
-        rospy.sleep(5)
-        self.close_gripper()
-        rospy.sleep(3)
+        # rospy.sleep(5)
+        # self.close_gripper()
+        # rospy.sleep(3)
         #target_pose is represented w.r.t map
         # self.target_pose=PoseStamped()
         # self.target_pose.pose.position.x=1.05
@@ -144,7 +147,7 @@ class PutdownPoseAction(object):
         self.cli.send_goal(navi_goal)
         rospy.loginfo("sending ")
         # wait for the action server to complete the order
-        self.cli.wait_for_result(rospy.Duration(10.0))
+        self.cli.wait_for_result(rospy.Duration(4.0))
         result_action_state = self.cli.get_state()
         print result_action_state
         # rospy.sleep(0)
@@ -153,7 +156,7 @@ class PutdownPoseAction(object):
 
         self.body.move_to_joint_positions({"head_tilt_joint":0.32})
 
-        rospy.sleep(2)
+        rospy.sleep(1)
 	listener = tf.TransformListener()
 	listener.waitForTransform(_ARM_TF,_BASE_TF, rospy.Time(), rospy.Duration(2.0))
 
@@ -186,7 +189,7 @@ class PutdownPoseAction(object):
         desired_base_distance = object_hand_offset_z-BASE_APPROACH_OFFSET_X
         print desired_base_distance 
 
-        if desired_base_distance>0:
+        if desired_base_distance>0.25:
             try:
                 self.base.go_rel(desired_base_distance,0.0,0)
             except:
@@ -194,9 +197,9 @@ class PutdownPoseAction(object):
                 tw = geometry_msgs.msg.Twist()
                 tw.linear.x =0.5
                 self.vel_pub.publish(tw)
-                # rospy.logerr("Failed to obtain resource: {}\nRetrying...".format(e))
 
-
+            rospy.sleep(1)
+            # rospy.logerr("Failed to obtain resource: {}\nRetrying...".format(e))
 
             # pose=PoseStamped()
             # pose.header.stamp = rospy.Time.now()
@@ -238,7 +241,7 @@ class PutdownPoseAction(object):
 
     def setdown(self):
         # self.close_gripper();
-        rospy.sleep(2)
+        # rospy.sleep(2)
         # self.body.impedance_config='compliance_hard'
         # rospy.sleep(2)
         # self.switch.activate("grasping")
@@ -252,19 +255,20 @@ class PutdownPoseAction(object):
             print "cur_height", (self.cur_arm_lift+ARM_LINK_OFFSET_Z)
             print "target", self.target_height+ObJ_LIFT_OFFSET_Z
             if self.Touch_tabletop==False:
-                self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.01)})
+               self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.0125)})
 
             print "touch", self.Touch_tabletop
+            self.as_result.touched=self.Touch_tabletop
             # self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.01),"arm_flex_joint":self.cur_arm_flex,"arm_roll_joint":self.cur_arm_roll})
             # manipulator.rise_arm(current_height - 0.01, 1.0);
             # current_weight = abs(getCurrentWeight());
             rospy.loginfo("decreasing")
-            cur_height-=0.01
-            rospy.sleep(0.1)
+            cur_height-=0.0125
+            rospy.sleep(0.08)
         rospy.loginfo("--------------finished")
         self.open_gripper()
 
-        rospy.sleep(3)
+        rospy.sleep(1)
         self.base.go_rel(-0.25,0.0,0)
         rospy.sleep(1)
         self.body.move_to_neutral()
@@ -289,11 +293,11 @@ class PutdownPoseAction(object):
         cur_time = rospy.get_time()
         duration = self.force_time = rospy.get_time()
 
-        if force_var>0.7:
+        if force_var>0.64:
             self.Touch_tabletop=True
             self.force_time =rospy.get_time()
         else:
-            if duration <2.0:
+            if duration <5.0:
                 return;
             else:
                 self.Touch_tabletop=False
