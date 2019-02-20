@@ -10,7 +10,7 @@ from std_srvs.srv import Empty
 from geometry_msgs.msg import *
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal 
 from actionlib_msgs.msg import GoalStatus
-from hsrb_impedance_control_example.impedance_control_switch import ImpedanceControlSwitch
+# from hsrb_impedance_control_example.impedance_control_switch import ImpedanceControlSwitch
 from hsrb_interface import Robot, exceptions, geometry
 from villa_manipulation.msg import *
 from sensor_msgs.msg import JointState
@@ -54,10 +54,12 @@ class PutdownPoseAction(object):
        
         self.as_result= villa_manipulation.msg.ForcePutDownResult()
         self.as_result.touched=False 
+        self.force_time=rospy.get_time()
 	# self.switch = ImpedanceControlSwitch() 
         # self.switch.inactivate()
         self.cli= actionlib.SimpleActionClient('/move_base/move', MoveBaseAction)
         self.cli.wait_for_server()
+    
 
         jointstates_topic='hsrb/joint_states'
 	rospy.Subscriber(jointstates_topic, JointState, self.joint_state_Cb)
@@ -247,6 +249,8 @@ class PutdownPoseAction(object):
         # self.switch.activate("grasping")
         # self.body.impedance_config='grasping'
         cur_height = self.cur_arm_lift+ ARM_LINK_OFFSET_Z
+        self.force_time = rospy.get_time()
+        self.Touch_tabletop=False
 
         # while self.Touch_tabletop == False & (cur_height > self.target_pose.pose.position.z):
         while cur_height > (self.target_height+ObJ_LIFT_OFFSET_Z):
@@ -291,13 +295,14 @@ class PutdownPoseAction(object):
         # rospy.loginfo("force change: %.2lf", force_var)
 
         cur_time = rospy.get_time()
-        duration = self.force_time = rospy.get_time()
+        duration = self.force_time - rospy.get_time()
 
-        if force_var>0.64:
+        if force_var>5.0:
             self.Touch_tabletop=True
             self.force_time =rospy.get_time()
+            print "force true", force_var
         else:
-            if duration <5.0:
+            if duration <3.5:
                 return;
             else:
                 self.Touch_tabletop=False
