@@ -83,6 +83,9 @@ class PutdownPoseAction(object):
         self._as = actionlib.SimpleActionServer(self._action_name, villa_manipulation.msg.ForcePutDownAction, execute_cb=self.execute_cb, auto_start = False)
         self._as.start()
 
+        # rospy.sleep(5.0)
+        # self.body.move_to_joint_positions({"arm_lift_joint":target_pose_arm.pose.position.z, "arm_flex_joint":-math.pi/2, "arm_roll_joint": 0.0,"wrist_roll_joint":-1.57, "wrist_flex_joint":0.0})
+
     #map pose
     def execute_cb(self, goal):
         rospy.loginfo("putdown pose")
@@ -94,8 +97,9 @@ class PutdownPoseAction(object):
         self.target_height=self.target_pose.pose.position.z
         self.target_pose.header.frame_id=_ORIGIN_TF
         self.target_pose.pose.position.z+=HEIGHT_OFFSET_Z
+
         self.test_armmotion();
-        self.setdown();
+        # self.setdown();
        
         #----------------old putdown---------------------------
         # self.body.move_to_joint_positions({"arm_lift_joint":0.655, "arm_flex_joint":-1.45,"arm_roll_joint":1.49,"wrist_roll_joint":-1.45,"wrist_flex_joint":0.0})
@@ -149,16 +153,12 @@ class PutdownPoseAction(object):
         self.cli.send_goal(navi_goal)
         rospy.loginfo("sending ")
         # wait for the action server to complete the order
-        self.cli.wait_for_result(rospy.Duration(4.0))
+        self.cli.wait_for_result(rospy.Duration(2.0))
         result_action_state = self.cli.get_state()
         print result_action_state
         # rospy.sleep(0)
-
-
-
         self.body.move_to_joint_positions({"head_tilt_joint":0.32})
-
-        rospy.sleep(1)
+        rospy.sleep(0.5)
 	listener = tf.TransformListener()
 	listener.waitForTransform(_ARM_TF,_BASE_TF, rospy.Time(), rospy.Duration(2.0))
 
@@ -168,10 +168,10 @@ class PutdownPoseAction(object):
             rospy.loginfo("the target height is too low")
         elif  target_pose_base.pose.position.z < MAX_HEIGHT_SHOULDER:
             target_pose_arm= listener.transformPose(_ARM_TF, target_pose_base)
-            self.body.move_to_joint_positions({"arm_lift_joint":target_pose_arm.pose.position.z, "arm_flex_joint":-math.pi/2, "arm_roll_joint": 0.0,"wrist_roll_joint":0.0, "wrist_flex_joint":0.0})
+            self.body.move_to_joint_positions({"arm_lift_joint":target_pose_arm.pose.position.z, "arm_flex_joint":-math.pi/2, "arm_roll_joint": 0.0,"wrist_roll_joint":-math.pi/2, "wrist_flex_joint":0.0})
         elif target_pose_base.pose.position.z < MAX_HEIGHT_SHOULDER+ARM_LENGTH:
             shoulder_angle = math.asin((target_pose_base.pose.position.z-MAX_HEIGHT_SHOULDER)/ARM_LENGTH)
-            self.body.move_to_joint_positions({"arm_lift_joint":MAX_ARM_LIFT, "arm_flex_joint":-math.pi/2+shoulder_angle, "arm_roll_joint": 0.0,"wrist_roll_joint":0.0, "wrist_flex_joint":-shoulder_angle})
+            self.body.move_to_joint_positions({"arm_lift_joint":MAX_ARM_LIFT, "arm_flex_joint":-math.pi/2+shoulder_angle, "arm_roll_joint": 0.0,"wrist_roll_joint":-math.pi/2, "wrist_flex_joint":-shoulder_angle})
         else:
             rospy.loginfo("the target height is too high")
 
@@ -187,6 +187,7 @@ class PutdownPoseAction(object):
 
         # print object_hand_offset_y
         # self.base.go_rel(0.0,0.15-object_hand_offset_y,0)
+        # rospy.sleep(10)
 
         desired_base_distance = object_hand_offset_z-BASE_APPROACH_OFFSET_X
         print desired_base_distance 
@@ -305,7 +306,7 @@ class PutdownPoseAction(object):
         cur_time = rospy.get_time()
         duration = self.force_time - rospy.get_time()
 
-        if force_var>5.0:
+        if force_var>10.0:
             self.Touch_tabletop=True
             self.force_time =rospy.get_time()
             print "force true", force_var
