@@ -35,9 +35,9 @@ def mains():
     client.wait_for_server()
     goal = villa_manipulation.msg.ForcePutDownGoal()
     goal.place_pose =PoseStamped()
-    goal.place_pose.pose.position.x=1.3
+    goal.place_pose.pose.position.x=1.5
     goal.place_pose.pose.position.y=0.45
-    goal.place_pose.pose.position.z=0.74
+    goal.place_pose.pose.position.z=0.78
     goal.place_pose.header.frame_id='map'
  
     client.send_goal(goal)
