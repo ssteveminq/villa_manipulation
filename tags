@@ -580,7 +580,7 @@ odometryCallback	include/villa_manipulation/sensor_capture.h	/^    void odometry
 odometryCallback	src/sensor_capture.h	/^    void odometryCallback(const nav_msgs::OdometryConstPtr& data) {$/;"	f	class:OdometryCapture
 open_gripper	scripts/givepose_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:GivePoseAction
 open_gripper	scripts/handover_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:HandoverAction
-open_gripper	scripts/putdown_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:PutdownPoseAction
+open_gripper	scripts/putdown_actionserver.py	/^    def open_gripper(self, to_width=1.1):$/;"	m	class:PutdownPoseAction
 open_gripper	scripts/receivepose_actionserver.py	/^    def open_gripper(self, to_width=1.2):$/;"	m	class:ReceivePoseAction
 open_gripper	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::open_gripper() {$/;"	f	class:villa_manipulation::Manipulator
 opendoor	scripts/odh_l_pull.py	/^def opendoor(req):$/;"	f

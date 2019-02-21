@@ -99,7 +99,7 @@ class PutdownPoseAction(object):
         self.target_pose.pose.position.z+=HEIGHT_OFFSET_Z
 
         self.test_armmotion();
-        # self.setdown();
+        self.setdown();
        
         #----------------old putdown---------------------------
         # self.body.move_to_joint_positions({"arm_lift_joint":0.655, "arm_flex_joint":-1.45,"arm_roll_joint":1.49,"wrist_roll_joint":-1.45,"wrist_flex_joint":0.0})
@@ -271,7 +271,10 @@ class PutdownPoseAction(object):
             cur_height-=0.0125
             rospy.sleep(0.08)
         rospy.loginfo("--------------finished")
-        self.open_gripper()
+        try:
+            self.open_gripper()
+        except: 
+            rospy.lgoinfo("opengripper failed")
 
         # rospy.sleep(1)
         # try:
@@ -306,7 +309,7 @@ class PutdownPoseAction(object):
         cur_time = rospy.get_time()
         duration = self.force_time - rospy.get_time()
 
-        if force_var>10.0:
+        if force_var>13.0:
             self.Touch_tabletop=True
             self.force_time =rospy.get_time()
             print "force true", force_var
@@ -327,7 +330,7 @@ class PutdownPoseAction(object):
         # rospy.loginfo("forcesensor callback")
         # rospy.loginfo("x: %.2lf, y: %.2lf, z: %.2lf", msg.wrench.force.x, msg.wrench.force.y, msg.wrench.force.z)
 
-    def open_gripper(self, to_width=1.2):
+    def open_gripper(self, to_width=1.1):
         self.gripper.command(to_width)
 
     def close_gripper(self, to_width=-0.01):
