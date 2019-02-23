@@ -26,8 +26,6 @@ class ReceivePoseAction(object):
             except(exceptions.ResourceNotFoundError, exceptions.RobotConnectionError) as e:
                 rospy.logerr("Failed to obtain resource: {}\nRetrying...".format(e))
 
-        #self.grabbag_client = rospy.ServiceProxy(GRAB_BAG_SRV_NAME,Grabbag)
-        # self.close_gripper()
 
         self._as = actionlib.SimpleActionServer(self._action_name, villa_manipulation.msg.HandoverAction, execute_cb=self.execute_cb, auto_start = False)
         self._as.start()
