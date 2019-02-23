@@ -38,7 +38,7 @@ class ReceivePoseAction(object):
 
         self.close_gripper()
         rospy.sleep(2)
-        self.body.move_to_joint_positions({"arm_lift_joint": 0.0, "arm_flex_joint": -0.0,"arm_roll_joint": 2.6,"wrist_roll_joint":1.4, "wrist_flex_joint":-1.45})
+        self.body.move_to_joint_positions({"arm_lift_joint": 0.0, "arm_flex_joint": -0.0,"arm_roll_joint": 2.7,"wrist_roll_joint":1.4, "wrist_flex_joint":-1.45})
 
         # rospy.sleep(2)
         rospy.loginfo("receivepose action finished")
