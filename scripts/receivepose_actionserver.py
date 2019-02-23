@@ -31,6 +31,9 @@ class ReceivePoseAction(object):
         self._as.start()
 
     def execute_cb(self, goal):
+
+        self.body.move_to_neutral()
+        rospy.sleep(3)
         self.open_gripper()
         rospy.loginfo("give pose")
         self.body.move_to_joint_positions({"arm_lift_joint":0.3, "arm_flex_joint":-0.6,"arm_roll_joint":-1.57,"wrist_roll_joint":-0.7,"wrist_flex_joint":-0.5})
