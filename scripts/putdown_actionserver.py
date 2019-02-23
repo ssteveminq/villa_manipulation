@@ -157,7 +157,11 @@ class PutdownPoseAction(object):
         result_action_state = self.cli.get_state()
         print result_action_state
         # rospy.sleep(0)
-        self.body.move_to_joint_positions({"head_tilt_joint":0.32})
+        try:
+            self.body.move_to_joint_positions({"head_tilt_joint":0.32})
+        except:
+            rospy.loginfo("fail")
+
         rospy.sleep(0.5)
 	listener = tf.TransformListener()
 	listener.waitForTransform(_ARM_TF,_BASE_TF, rospy.Time(), rospy.Duration(2.0))
@@ -288,6 +292,7 @@ class PutdownPoseAction(object):
         # self.base.go_rel(-0.25,0.0,0)
         rospy.sleep(1)
         self.body.move_to_neutral()
+        rospy.sleep(3)
 
         # self.body.impedance_config=None
         # self.switch.inactivate()
