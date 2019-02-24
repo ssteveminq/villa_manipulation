@@ -286,13 +286,18 @@ class PutdownPoseAction(object):
         # except:
         # rospy.loginfo("fail")
         tw = geometry_msgs.msg.Twist()
-        tw.linear.x =-0.6
+        tw.linear.x =-0.75
         self.vel_pub.publish(tw)
+        rospy.sleep(1)
 
         # self.base.go_rel(-0.25,0.0,0)
         # rospy.sleep(0)
-        self.body.move_to_neutral()
-        rospy.sleep(3)
+        try:
+            self.body.move_to_neutral()
+        except:
+            rospy.lgoinfo("go to netural pose failed")
+
+        rospy.sleep(5)
 
         self.as_result.touched=True
         # self.body.impedance_config=None

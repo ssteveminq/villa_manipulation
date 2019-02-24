@@ -2,7 +2,9 @@
 <launch>
     <node pkg="villa_manipulation" type="receivepose_actionserver.py" name="receivepose_action" output="screen"/>
     <!--<node pkg="villa_manipulation" type="givepose_actionserver.py" name="givepose_action" output="screen"/>-->
+    <node pkg="villa_manipulation" type="homepose_actionserver.py" name="homepose_action" output="screen"/>
     <node pkg="villa_manipulation" type="putdown_actionserver.py" name="putdown_action" output="screen"/>
     <node pkg="navi_service" type="map_checker" name="map_checker_node" output="screen"/>
+    <node pkg="sm_project" type="speak_to_obstacle.py" name="speaking_mode" output="screen"/>
     <!--<node pkg="villa_manipulation" type="putdown_actionserver.py" name="putdown_action" output="screen"/>-->
 </launch>
