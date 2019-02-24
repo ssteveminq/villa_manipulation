@@ -290,10 +290,11 @@ class PutdownPoseAction(object):
         self.vel_pub.publish(tw)
 
         # self.base.go_rel(-0.25,0.0,0)
-        rospy.sleep(1)
+        # rospy.sleep(0)
         self.body.move_to_neutral()
         rospy.sleep(3)
 
+        self.as_result.touched=True
         # self.body.impedance_config=None
         # self.switch.inactivate()
         
