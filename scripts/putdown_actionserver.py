@@ -278,7 +278,7 @@ class PutdownPoseAction(object):
         try:
             self.open_gripper()
         except: 
-            rospy.lgoinfo("opengripper failed")
+            rospy.loginfo("opengripper failed")
 
         # rospy.sleep(1)
         # try:
@@ -295,9 +295,9 @@ class PutdownPoseAction(object):
         try:
             self.body.move_to_neutral()
         except:
-            rospy.lgoinfo("go to netural pose failed")
+            rospy.loginfo("go to netural pose failed")
 
-        rospy.sleep(5)
+        rospy.sleep(2)
 
         self.as_result.touched=True
         # self.body.impedance_config=None
