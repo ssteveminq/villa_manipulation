@@ -264,7 +264,7 @@ class PutdownPoseAction(object):
             print "cur_height", (self.cur_arm_lift+ARM_LINK_OFFSET_Z)
             print "target", self.target_height+ObJ_LIFT_OFFSET_Z
             if self.Touch_tabletop==False:
-               self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.0125)})
+               self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.015)})
 
             print "touch", self.Touch_tabletop
             self.as_result.touched=self.Touch_tabletop
@@ -272,21 +272,30 @@ class PutdownPoseAction(object):
             # manipulator.rise_arm(current_height - 0.01, 1.0);
             # current_weight = abs(getCurrentWeight());
             rospy.loginfo("decreasing")
-            cur_height-=0.0125
+            cur_height-=0.015
             rospy.sleep(0.08)
         rospy.loginfo("--------------finished")
+
+        rospy.sleep(1)
         try:
             self.open_gripper()
+            rospy.sleep(1)
         except: 
             rospy.loginfo("opengripper failed")
 
-        # rospy.sleep(1)
+        rospy.sleep(3)
+        try:
+            self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift+0.15), "wrist_flex_joint":(self.cur_wrist_flex-0.85)})
+        except: 
+            rospy.loginfo("move joint failed")
+
+        rospy.sleep(2)
         # try:
           # self.base.go_rel(-0.25,0.0,0)
         # except:
         # rospy.loginfo("fail")
         tw = geometry_msgs.msg.Twist()
-        tw.linear.x =-0.75
+        tw.linear.x =-1.00
         self.vel_pub.publish(tw)
         rospy.sleep(1)
 
@@ -308,6 +317,8 @@ class PutdownPoseAction(object):
         self.cur_arm_flex=msg.position[0]
         self.cur_arm_lift=msg.position[1]
         self.cur_arm_roll=msg.position[2]
+        self.cur_wrist_roll=msg.position[12]
+        self.cur_wrist_flex=msg.position[11]
 
     def calculate_variance(self, pre_force,cur_force):
         force_var=0.0;
