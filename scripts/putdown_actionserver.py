@@ -285,11 +285,11 @@ class PutdownPoseAction(object):
 
         rospy.sleep(3)
         try:
-            self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift+0.15), "wrist_flex_joint":(self.cur_wrist_flex-0.85)})
+            self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift+0.15), "wrist_flex_joint":(self.cur_wrist_flex-0.8)})
         except: 
             rospy.loginfo("move joint failed")
 
-        rospy.sleep(2)
+        rospy.sleep(3)
         # try:
           # self.base.go_rel(-0.25,0.0,0)
         # except:

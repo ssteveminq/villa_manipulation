@@ -108,6 +108,7 @@ HANDLE_TO_HAND_POS_Y	scripts/open_knobdoor_service.py	/^HANDLE_TO_HAND_POS_Y=0.0
 HANDLE_TO_HAND_POS_Y	scripts/open_refdoor_service.py	/^HANDLE_TO_HAND_POS_Y=0.012$/;"	v
 HEIGHT_OFFSET_Z	scripts/putdown_actionserver.py	/^HEIGHT_OFFSET_Z=0.25$/;"	v
 HandoverAction	scripts/handover_actionserver.py	/^class HandoverAction(object):$/;"	c
+HeadTrackAction	scripts/headtracking_actionserver.py	/^class HeadTrackAction(object):$/;"	c
 HomePoseAction	scripts/homepose_actionserver.py	/^class HomePoseAction(object):$/;"	c
 JointStateMap	include/villa_manipulation/manipulator.h	/^typedef std::map<std::string, float> JointStateMap;$/;"	t
 MANIPUATION_CONTROLLER_H	src/manipulation_controller.h	2;"	d
@@ -119,6 +120,7 @@ Manipulator	include/villa_manipulation/manipulator.h	/^class Manipulator {$/;"	c
 Manipulator	src/libvilla_hsrb/manipulator.cpp	/^Manipulator::Manipulator(bool in_simulation) :$/;"	f	class:villa_manipulation::Manipulator
 Manipulator	src/manipulation_controller.h	/^	Manipulator(ros::NodeHandle& node_handle) :$/;"	f	class:Manipulator
 Manipulator	src/manipulation_controller.h	/^class Manipulator {$/;"	c
+MoveIt_IK_Action	scripts/moveit_ik_actionserver.py	/^class MoveIt_IK_Action(object):$/;"	c
 OBJECT_LIFT_OFFSET	src/grasp_server.cpp	/^    double OBJECT_LIFT_OFFSET = 0.04;$/;"	m	class:GraspAction	file:
 ObJ_LIFT_OFFSET_Z	scripts/putdown_actionserver.py	/^ObJ_LIFT_OFFSET_Z=0.02$/;"	v
 OdometryCapture	include/sensor_capture.h	/^    OdometryCapture() : base_location_(), base_orientation_() {$/;"	f	class:OdometryCapture
@@ -312,7 +314,9 @@ __ft_sensor_cb	scripts/open_refdoor_service.py	/^    def __ft_sensor_cb(self, da
 __init__	scripts/givepose_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:GivePoseAction
 __init__	scripts/handover_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:HandoverAction
 __init__	scripts/handover_activity.py	/^	def __init__(self):$/;"	m	class:setRobot
+__init__	scripts/headtracking_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:HeadTrackAction
 __init__	scripts/homepose_actionserver.py	/^    def __init__(self, name, robot):$/;"	m	class:HomePoseAction
+__init__	scripts/moveit_ik_actionserver.py	/^    def __init__(self, name):$/;"	m	class:MoveIt_IK_Action
 __init__	scripts/nav_open_door_client.py	/^        def __init__(self, wait=0.0):$/;"	m	class:TaskManager
 __init__	scripts/odh_l_pull.py	/^	def __init__(self):$/;"	m	class:setRobot
 __init__	scripts/odh_l_pull.py	/^    def __init__(self):$/;"	m	class:ForceSensorCapture
@@ -373,6 +377,8 @@ close_gripper	scripts/homepose_actionserver.py	/^    def close_gripper(self, to_
 close_gripper	scripts/putdown_actionserver.py	/^    def close_gripper(self, to_width=-0.01):$/;"	m	class:PutdownPoseAction
 close_gripper	scripts/receivepose_actionserver.py	/^    def close_gripper(self, to_width=-0.01):$/;"	m	class:ReceivePoseAction
 close_gripper	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::close_gripper() {$/;"	f	class:villa_manipulation::Manipulator
+cmd_cb	scripts/headtracking_actionserver.py	/^    def cmd_cb(self,msg):$/;"	m	class:HeadTrackAction
+cmd_cb	scripts/moveit_ik_actionserver.py	/^    def cmd_cb(self,msg):$/;"	m	class:MoveIt_IK_Action
 compute_new_location	src/libvilla_hsrb/manipulator.cpp	/^tf::Vector3 Manipulator::compute_new_location(tf::Vector3 rel_coords) {$/;"	f	class:villa_manipulation::Manipulator
 compute_new_location	src/manipulation_controller.cpp	/^tf::Vector3 Manipulator::compute_new_location(tf::Vector3 rel_coords) {$/;"	f	class:Manipulator
 constrain_trajectories	src/libvilla_hsrb/manipulator.cpp	/^boost::optional<trajectory_msgs::JointTrajectory> Manipulator::constrain_trajectories(const trajectory_msgs::JointTrajectory &trajectory) {$/;"	f	class:villa_manipulation::Manipulator
@@ -380,7 +386,9 @@ ek	scripts/open_knobdoor_miguel.py	/^ek=math.pi\/2), geometry.pose(ei=math.pi\/2
 ek	scripts/open_knobdoor_service.py	/^ek=math.pi\/2), geometry.pose(ei=math.pi\/2))$/;"	v
 execute_cb	scripts/givepose_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:GivePoseAction
 execute_cb	scripts/handover_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:HandoverAction
+execute_cb	scripts/headtracking_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:HeadTrackAction
 execute_cb	scripts/homepose_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:HomePoseAction
+execute_cb	scripts/moveit_ik_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:MoveIt_IK_Action
 execute_cb	scripts/putdown_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:PutdownPoseAction
 execute_cb	scripts/receivepose_actionserver.py	/^    def execute_cb(self, goal):$/;"	m	class:ReceivePoseAction
 execute_trajectory	src/libvilla_hsrb/manipulator.cpp	/^bool Manipulator::execute_trajectory(const trajectory_msgs::JointTrajectory &trajectory, bool blocking) {$/;"	f	class:villa_manipulation::Manipulator
@@ -678,6 +686,7 @@ rise_arm	src/manipulation_controller.cpp	/^bool Manipulator::rise_arm(double arm
 robot	scripts/givepose_actionserver.py	/^    robot = Robot()$/;"	v
 robot	scripts/handover_actionserver.py	/^    robot = Robot()$/;"	v
 robot	scripts/handover_activity.py	/^	robot = setRobot()$/;"	v
+robot	scripts/headtracking_actionserver.py	/^    robot = Robot()$/;"	v	class:HeadTrackAction
 robot	scripts/homepose_actionserver.py	/^    robot = Robot()$/;"	v
 robot	scripts/open_door_service.py	/^        robot = setRobot()$/;"	v
 robot	scripts/open_gripper.py	/^        robot = setRobot()$/;"	v
@@ -698,7 +707,9 @@ scanShelf	src/grasp_server.cpp	/^    bool scanShelf() {$/;"	f	class:GraspAction
 scanShelf	src/grasp_server.cpp	/^void scanShelf(const villa_manipulation::ScanShelfGoalConstPtr& goal, actionlib::SimpleActionServer<villa_manipulation::ScanShelfAction> * as) {$/;"	f
 server	scripts/givepose_actionserver.py	/^    server = GivePoseAction('givepose_action', robot)$/;"	v
 server	scripts/handover_actionserver.py	/^    server = HandoverAction('handover_action', robot)$/;"	v
+server	scripts/headtracking_actionserver.py	/^    server = HeadTrackAction('headtracking_action', robot)$/;"	v	class:HeadTrackAction
 server	scripts/homepose_actionserver.py	/^    server = HomePoseAction('homepose_action', robot)$/;"	v
+server	scripts/moveit_ik_actionserver.py	/^    server = MoveIt_IK_Action('moveit_ik')$/;"	v	class:MoveIt_IK_Action
 server	scripts/putdown_actionserver.py	/^    server = PutdownPoseAction('putdown_action', robot)$/;"	v
 server	scripts/receivepose_actionserver.py	/^    server = ReceivePoseAction('receivepose_action', robot)$/;"	v
 setDown	src/grasp_server.cpp	/^    void setDown() {$/;"	f	class:GraspAction
@@ -723,6 +734,8 @@ slide_base	src/manipulation_controller.cpp	/^bool Manipulator::slide_base(double
 slide_base	src/manipulation_controller.cpp	/^bool Manipulator::slide_base(double x, double y, double duration) {$/;"	f	class:Manipulator
 slightlyRiseUpArm	src/grasp_server.cpp	/^    void slightlyRiseUpArm(double shoulder_angle){$/;"	f	class:GraspAction
 srv_list_controllers_	src/manipulation_controller.h	/^	ros::ServiceClient srv_list_controllers_;$/;"	m	class:Manipulator
+states_cb	scripts/headtracking_actionserver.py	/^    def states_cb(self,msg):$/;"	m	class:HeadTrackAction
+states_cb	scripts/moveit_ik_actionserver.py	/^    def states_cb(self,msg):$/;"	m	class:MoveIt_IK_Action
 task_manager	scripts/nav_open_door_client.py	/^    task_manager = TaskManager()$/;"	v	class:TaskManager
 test_armmotion	scripts/putdown_actionserver.py	/^    def test_armmotion(self):$/;"	m	class:PutdownPoseAction
 toPlusMinusPiHalvesRange	src/grasp_server.cpp	/^    double toPlusMinusPiHalvesRange(double angle){$/;"	f	class:GraspAction

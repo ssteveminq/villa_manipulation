@@ -48,6 +48,8 @@ add_action_files(
    PutDownDishwasher.action
    ScanShelf.action
    Handover.action
+   HeadTracking.action
+   Move_Ik.action
 )
 
 generate_messages(
