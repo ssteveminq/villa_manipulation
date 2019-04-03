@@ -231,7 +231,7 @@ class PutdownPoseAction(object):
 
 
         # while self.Touch_tabletop == False:
-            # current_height = manipulator.get_trajectory_state("/hsrb/arm_trajectory_controller/query_state").response.position[0];
+            # current_height = manipulator.get_trajectory_state("/hsrb/arm_trajectory_controller/query_state").response.position[0]3
             # std::cout << "Current weight: " << current_weight << std::endl;
             # self.body.move_to_joint_positions({"arm_lift_joint":self.cur_arm_lift-0.01})
             # manipulator.rise_arm(current_height - 0.01, 1.0);
@@ -264,7 +264,7 @@ class PutdownPoseAction(object):
             print "cur_height", (self.cur_arm_lift+ARM_LINK_OFFSET_Z)
             print "target", self.target_height+ObJ_LIFT_OFFSET_Z
             if self.Touch_tabletop==False:
-               self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.015)})
+               self.body.move_to_joint_positions({"arm_lift_joint":(self.cur_arm_lift-0.03)})
 
             print "touch", self.Touch_tabletop
             self.as_result.touched=self.Touch_tabletop
@@ -272,8 +272,8 @@ class PutdownPoseAction(object):
             # manipulator.rise_arm(current_height - 0.01, 1.0);
             # current_weight = abs(getCurrentWeight());
             rospy.loginfo("decreasing")
-            cur_height-=0.015
-            rospy.sleep(0.08)
+            cur_height-=0.03
+            rospy.sleep(0.1)
         rospy.loginfo("--------------finished")
 
         rospy.sleep(1)
