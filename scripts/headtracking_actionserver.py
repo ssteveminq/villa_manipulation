@@ -5,7 +5,7 @@ import actionlib
 
 from std_msgs.msg import *
 from sensor_msgs.msg import JointState
-from std_msgs.msg import Float32
+from std_msgs.msg import Float32, Int8
 from geometry_msgs.msg import *
 from hsrb_interface import Robot, exceptions, geometry
 from villa_manipulation.msg import *
@@ -31,9 +31,13 @@ class HeadTrackAction(object):
         self._as = actionlib.SimpleActionServer(self._action_name, villa_manipulation.msg.HeadTrackingAction, execute_cb=self.execute_cb, auto_start = False)
         self._as.start()
 
+
+        self.vel_pub = rospy.Publisher('/hsrb/command_velocity', geometry_msgs.msg.Twist, queue_size=10)
+        self.tw = geometry_msgs.msg.Twist()
         self.desired_pan=0.0
         self.desired_tilt=0.0
         rospy.Subscriber('desired_head_pan',Float32,self.cmd_cb)
+        rospy.Subscriber('desired_base_forward',Int8,self.base_cmd_cb)
         rospy.Subscriber('/hsrb/joint_states', JointState, self.states_cb)
 
     def cmd_cb(self,msg):
@@ -43,10 +47,24 @@ class HeadTrackAction(object):
         self.desired_pan=cmd
         self.desired_tilt=0.1
  
+    def base_cmd_cb(self,msg):
+        #clatest_positions
+        cmd= msg.data
+        if cmd ==1:
+            self.tw.linear.x=0.25
+        elif cmd ==2:
+            self.tw.linear.x=-0.25
+        else:
+            self.tw.linear.x=0
+ 
 
     def execute_cb(self, goal):
         rospy.loginfo("head_tracking pose- pan/ tilt: %.2lf, %2lf", self.desired_pan, self.desired_tilt)
+        #pbulish_head_command
         self.body.move_to_joint_positions({"head_pan_joint":self.desired_pan, "head_tilt_joint":self.desired_tilt})
+        #publish base command
+        self.vel_pub.publish(self.tw)
+        self.tw=geometry_msgs.msg.Twist()
         # rospy.sleep(0.5)
         self._as.set_succeeded()
 

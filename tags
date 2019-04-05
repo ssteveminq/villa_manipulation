@@ -352,6 +352,7 @@ avoidalt	scripts/handover_actionserver.py	/^avoidalt = geometry_msgs.msg.Point()
 avoidaltt	scripts/handover_actionserver.py	/^avoidaltt = geometry_msgs.msg.Point()$/;"	v
 avoidt	scripts/handover_actionserver.py	/^avoidt = geometry_msgs.msg.Point()$/;"	v
 base_client_	src/manipulation_controller.h	/^	Client base_client_;$/;"	m	class:Manipulator
+base_cmd_cb	scripts/headtracking_actionserver.py	/^    def base_cmd_cb(self,msg):$/;"	m	class:HeadTrackAction
 base_controller	include/villa_manipulation/manipulator.h	/^  TrajectoryController base_controller;$/;"	m	class:villa_manipulation::Manipulator
 base_location_	include/sensor_capture.h	/^    geometry_msgs::Point base_location_;$/;"	m	class:OdometryCapture
 base_location_	include/villa_manipulation/sensor_capture.h	/^    geometry_msgs::Point base_location_;$/;"	m	class:OdometryCapture
