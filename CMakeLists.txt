@@ -50,6 +50,7 @@ add_action_files(
    Handover.action
    HeadTracking.action
    Move_Ik.action
+   EE_Control.action
 )
 
 generate_messages(

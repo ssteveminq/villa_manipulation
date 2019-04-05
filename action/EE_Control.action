@@ -1,6 +1,6 @@
 #goal definition
+int8 cmd
 geometry_msgs/PoseStamped pose
-float32 desired_head_pan
 ---
 #result definition
 ---
