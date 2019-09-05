@@ -22,6 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   tmc_manipulation_msgs
   tmc_planning_msgs
   tmc_utils
+  navi_service
 )
 
 include_directories(
@@ -77,6 +78,7 @@ catkin_package(
   tmc_manipulation_types_bridge
   tmc_utils
   actionlib_msgs
+  navi_service
 
 )
 

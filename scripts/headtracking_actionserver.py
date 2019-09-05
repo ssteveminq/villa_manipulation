@@ -9,6 +9,7 @@ from std_msgs.msg import Float32, Int8
 from geometry_msgs.msg import *
 from hsrb_interface import Robot, exceptions, geometry
 from villa_manipulation.msg import *
+from navi_service.msg import *
 import math
 
 
@@ -18,6 +19,8 @@ class HeadTrackAction(object):
         # Init actionserver
         self._action_name = name
         self.robot = robot
+
+        self.is_Obstacle=False
 
         # Preparation to use robot functions
         while not rospy.is_shutdown():
@@ -31,6 +34,8 @@ class HeadTrackAction(object):
         self._as = actionlib.SimpleActionServer(self._action_name, villa_manipulation.msg.HeadTrackingAction, execute_cb=self.execute_cb, auto_start = False)
         self._as.start()
 
+        self.obs_cli = actionlib.SimpleActionClient('obscheck_action', navi_service.msg.ObsCheckerAction)
+        self.obs_cli.wait_for_server()
 
         self.vel_pub = rospy.Publisher('/hsrb/command_velocity', geometry_msgs.msg.Twist, queue_size=10)
         self.tw = geometry_msgs.msg.Twist()
@@ -46,20 +51,46 @@ class HeadTrackAction(object):
         # pan =1.0*cmd+self.latest_positions["head_pan_joint"]
         self.desired_pan=cmd
         self.desired_tilt=0.1
+
+    def checkobs(self):
+        self.is_Obstacle = False
+        obs_goal = navi_service.msg.ObsCheckerGoal()
+        pose = geometry_msgs.msg.PointStamped()
+        pose.header.frame_id='base_link'
+        pose.header.stamp=rospy.Time.now()
+        pose.point.x= 0.4
+        pose.point.y= 0.0
+        obs_goal.pose =pose
+
+        self.obs_cli.send_goal(obs_goal)
+        self.obs_cli.wait_for_result(rospy.Duration(4.0))
+        obs_result= self.obs_cli.get_result()
+        if obs_result!=None:
+            self.is_Obstacle= obs_result.is_free #true if obstalce exists
+        else:
+            self.is_Obstacle=True
+
+        return self.is_Obstacle 
+
  
     def base_cmd_cb(self,msg):
         #clatest_positions
         cmd= msg.data
+        res = self.checkobs()
         if cmd ==1:
-            self.tw.linear.x=0.25
+            if res ==False:
+                self.tw.linear.x=0.25
+            else:
+                self.tw.linear.x=0.0
         elif cmd ==2:
-            self.tw.linear.x=-0.25
+            if res ==False:
+                self.tw.linear.x=-0.25
         else:
             self.tw.linear.x=0
  
 
     def execute_cb(self, goal):
-        rospy.loginfo("head_tracking pose- pan/ tilt: %.2lf, %2lf", self.desired_pan, self.desired_tilt)
+        # rospy.loginfo("head_tracking pose- pan/ tilt: %.2lf, %2lf", self.desired_pan, self.desired_tilt)
         #pbulish_head_command
         self.body.move_to_joint_positions({"head_pan_joint":self.desired_pan, "head_tilt_joint":self.desired_tilt})
         #publish base command

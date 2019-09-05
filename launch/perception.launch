@@ -3,5 +3,5 @@
     <node pkg="villa_manipulation" type="headtracking_actionserver.py" name="headtracking_action" output="screen"/>
     <node pkg="navi_service" type="approach_server.py" name="approach_action" output="screen"/>
     <node pkg="navi_service" type="obscheck_server" name="obscheck_action" output="screen"/>
-    <!--<node pkg="villa_manipulation" type="putdown_actionserver.py" name="putdown_action" output="screen"/>-->
+    <node pkg="visual_perception" type="search_server" name="search_server" output="screen"/>
 </launch>
